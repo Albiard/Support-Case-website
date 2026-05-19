@@ -2,19 +2,211 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Recherche défaut</title>
-    style.css
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Documentation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f4f7fa, #dfe9f3);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        header {
+            position: relative;
+            background: #1f2937;
+            color: white;
+            padding: 40px 20px 60px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Images coins */
+        .logo-left,
+        .logo-right {
+            position: absolute;
+            top: 20px;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .logo-left {
+            left: 20px;
+        }
+
+        .logo-right {
+            right: 20px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* Boutons */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            padding: 20px;
+            background: #1f2937;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .logo-left,
+            .logo-right {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>🔎 Recherche de défaut machine</h1>
+    <header>
 
-<input type="text" id="search" placeholder="Tape un défaut..." onkeyup="rechercher()">
+        <!-- Image haut gauche -->
+        <img src="images/logo-gauche.png" alt="Logo gauche" class="logo-left">
 
-<div id="resultat"></div>
+        <!-- Image haut droite -->
+        <img src="images/logo-droite.png" alt="Logo droite" class="logo-right">
 
-data.js>
-script.jsscript>
+        <h1>Portail Documentation</h1>
+        <p>Bienvenue sur votre espace de navigation et de consultation</p>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <h2>Accès rapide</h2>
+            <p>
+                Retrouvez ici les différentes sections de votre documentation.
+                Cliquez sur un module pour accéder directement à sa page dédiée.
+            </p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>PMAF</h3>
+                <p>Accéder à la documentation et aux ressources PMAF.</p>
+                <a href="PMAF.html">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>PMXA</h3>
+                <p>Accéder à la documentation et aux ressources PMXA.</p>
+                <a href="PMXA.html">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>PMII</h3>
+                <p>Accéder à la documentation et aux ressources PMII.</p>
+                <a href="PMII.html">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>PMTE</h3>
+                <p>Accéder à la documentation et aux ressources PMTE.</p>
+                <a href="PMTE.html">Ouvrir</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Documentation interne</p>
+    </footer>
 
 </body>
 </html>
