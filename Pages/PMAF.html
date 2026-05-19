@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMAF</title>
+
+    <!-- CSS global -->
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 
-    <h1>Page PMAF</h1>
+    <!-- HEADER -->
+    <header>
 
-    <a href="../index.html">Retour accueil</a>
+        <!-- Logos -->
+        <img src="images/CEVA logo Ecat iD campus-white.png" alt="Logo Ceva" class="logo-left">
+        <img src="images/MachineDefault.png" alt="Logo machine" class="logo-right">
 
-    <nav class="tabs">
-        <button class="tab-btn active" data-tab="defauts">Défauts</button>
-        <button class="tab-btn" data-tab="3d">3D</button>
-        <button class="tab-btn" data-tab="documentation">Documentation</button>
+        <h1>PMAF</h1>
+        <p>Page dédiée à la documentation et aux ressources PMAF</p>
+
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span>›</span>
+        <span>PMAF</span>
     </nav>
 
-    <section id="defauts" class="tab-content active">
-        <h2>Défauts PMAF</h2>
-        <input type="text" id="searchInput" placeholder="Rechercher un défaut PMAF...">
-        <div id="results"></div>
-    </section>
+    <!-- CONTENU PRINCIPAL -->
+    <main>
 
-    <section id="3d" class="tab-content">
-        <h2>Vue 3D</h2>
-        <p>Emplacement du viewer 3D PMAF.</p>
-    </section>
+        <section class="intro">
+            <h2>Machine PMAF</h2>
 
-    <section id="documentation" class="tab-content">
-        <h2>Documentation</h2>
-        <p>Emplacement des documents PMAF.</p>
-    </section>
+            <p>
+                Vous êtes sur la page dédiée à la machine PMAF.
+                Vous pouvez retrouver ici toutes les informations, documents techniques et ressources associées.
+            </p>
+        </section>
 
-    <script src="../script/pmaf.js"></script>
+        <section class="cards">
+
+            <div class="card">
+                <h3>Documentation</h3>
+                <p>Accéder aux documents techniques PMAF.</p>
+                <a href="#">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>Maintenance</h3>
+                <p>Procédures de maintenance et interventions.</p>
+                <a href="#">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>Paramètres</h3>
+                <p>Réglages et configuration de la machine.</p>
+                <a href="#">Ouvrir</a>
+            </div>
+
+            <div class="card">
+                <h3>Retour accueil</h3>
+                <p>Revenir au portail principal.</p>
+                <a href="../index.html">Accueil</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - Documentation interne PMAF</p>
+    </footer>
+
 </body>
+
 </html>
