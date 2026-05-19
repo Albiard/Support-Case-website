@@ -59,7 +59,7 @@ function rechercherDefaut(machine) {
 
     const recherche = searchInput.value
         .trim()
-        .toLowerCase();
+        .toUpperCase();
 
     if (recherche.length === 0) {
 
@@ -77,7 +77,7 @@ function rechercherDefaut(machine) {
             defaut.Nom &&
 
             defaut.Nom
-                .toLowerCase()
+                .toUpperCase()
                 .includes(recherche)
 
         );
@@ -99,7 +99,7 @@ function afficherResultats(resultats) {
 
         resultsDiv.innerHTML = `
             <div class="card">
-                <p>Aucun défaut trouvé.</p>
+                <p>AUCUN DÉFAUT TROUVÉ.</p>
             </div>
         `;
 
@@ -114,21 +114,21 @@ function afficherResultats(resultats) {
 
         card.innerHTML = `
 
-            <h3>${defaut.Nom}</h3>
+            <h3>${defaut.Nom.toUpperCase()}</h3>
 
             <p>
-                <strong>Type :</strong>
-                ${defaut.type}
+                <strong>TYPE :</strong>
+                ${defaut.type.toUpperCase()}
             </p>
 
             <p>
-                <strong>Cause :</strong><br>
-                ${defaut.Cause.replace(/\n/g, "<br>")}
+                <strong>CAUSE :</strong><br>
+                ${defaut.Cause.toUpperCase().replace(/\n/g, "<br>")}
             </p>
 
             <p>
-                <strong>Solution :</strong><br>
-                ${defaut.Solution.replace(/\n/g, "<br>")}
+                <strong>SOLUTION :</strong><br>
+                ${defaut.Solution.toUpperCase().replace(/\n/g, "<br>")}
             </p>
 
         `;
