@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMXA</title>
+
+    <link rel="stylesheet" href="../UI/pmxa.css">
+    <link rel="stylesheet" href="../UI/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="./Images/CEVA logo Ecat iD campus-white.png" alt="Logo Ceva" class="logo-left">
+
+        <h1>PMXA</h1>
+        <p>Page dédiée à la documentation et aux ressources PMXA</p>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span>›</span>
+        <span>PMXA</span>
+    </nav>
+
+    <main>
+
+        <!-- ONGLETS -->
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="defauts">Défauts</button>
+            <button class="tab-btn" data-tab="documentation">Documentation</button>
+        </nav>
+
+        <!-- DEFAUTS -->
+
+        <section id="defauts" class="tab-content active">
+
+            <h2>Défauts PMXA</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Rechercher un défaut PMXA..."
+            >
+
+            <div id="results"></div>
+
+        </section>
+
+        <!-- DOCUMENTATION -->
+
+        <section id="documentation" class="tab-content">
+
+            <h2>Documentation</h2>
+
+            <p>
+                Documents techniques associés à la machine PMXA.
+            </p>
+
+            <div class="doc-categories">
+
+                <div class="doc-card">
+                    <br>
+                    <h3>📘 Schémas électriques</h3>
+                        <br>
+                        <a
+                            href="../Documentation/PMXA/SMXA-C01500.pdf"
+                            class="folder-frame"
+                            target ="_blank"
+                        >PDF Schéma électrique</a>
+                </div>
+                <br>
+                <div class="doc-card">
+                    <h3>🛠️ Schémas pneumatiques</h3>
+                    <br>
+                    <a
+
+                            href="../Documentation/PMXA/SMXA-C01500P.pdf"
+                            class="folder-frame"
+                            target="_blank"
+                    >PDF Schéma pneumatique</a>
+                </div>
+                <br>
+                <div class="doc-card">
+                    <h3>📄 Notices utilisateur</h3>
+                        <br>
+                        <a
+                            href="../Documentation/PMXA/DOC01212_PMXA_C01500.pdf"
+                            class="folder-frame"
+                            target="_blank"
+                        >PDF Notice utilisateur</a>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Documentation interne PMXA</p>
+    </footer>
+
+    <script src="../script/pmxa.js"></script>
+
+</body>
+
+</html>
