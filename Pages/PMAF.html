@@ -6,84 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMAF</title>
 
-    <link rel="stylesheet" href="../UI/pmaf.css">
-    <link rel="stylesheet" href="../UI/style.css">
-
+    <!-- CSS global -->
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <img src="../Images/CEVA logo Ecat iD campus-white.png" alt="Logo Ceva" class="logo-left">
-        <img src="../Images/MachineDefault.png" alt="Logo machine" class="logo-right">
+
+        <!-- Logos -->
+        <img src="Pages/Images/CEVA logo Ecat iD campus-white.png" alt="Logo Ceva" class="logo-left">
 
         <h1>PMAF</h1>
         <p>Page dédiée à la documentation et aux ressources PMAF</p>
+
     </header>
 
+    <!-- BREADCRUMB -->
     <nav class="breadcrumb">
         <a href="../index.html">Accueil</a>
         <span>›</span>
         <span>PMAF</span>
     </nav>
 
+    <!-- CONTENU PRINCIPAL -->
     <main>
 
-        <!-- ONGLET -->
-
-        <nav class="tabs">
-            <button class="tab-btn active" data-tab="defauts">Défauts</button>
-            <button class="tab-btn" data-tab="documentation">Documentation</button>
-            <button class="tab-btn" data-tab="viewer3d">3D</button>
-        </nav>
-
-        <!-- DEFAUTS -->
-
-        <section id="defauts" class="tab-content active">
-
-            <h2>Défauts PMAF</h2>
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Rechercher un défaut PMAF..."
-            >
-
-            <div id="results"></div>
-
-        </section>
-
-        <!-- DOCUMENTATION -->
-
-        <section id="documentation" class="tab-content">
-
-            <h2>Documentation</h2>
+        <section class="intro">
+            <h2>Machine PMAF</h2>
 
             <p>
-                Documents techniques associés à la machine PMAF.
+                Vous êtes sur la page dédiée à la machine PMAF.
+                Vous pouvez retrouver ici toutes les informations, documents techniques et ressources associées.
             </p>
-
         </section>
 
-        <!-- 3D -->
+        <section class="cards">
 
-        <section id="viewer3d" class="tab-content">
+            <div class="card">
+                <h3>Défauts</h3>
+                <p>Accéder aux défauts de la machine.</p>
+                <a href="#">Ouvrir</a>
+            </div>
 
-            <h2>Vue 3D</h2>
+            <div class="card">
+                <h3>Documentation</h3>
+                <p>Accéder aux documents techniques.</p>
+                <a href="#">Ouvrir</a>
+            </div>
 
-            <p>
-                Plan ou modèle 3D de la machine PMAF.
-            </p>
+            <div class="card">
+                <h3>3D</h3>
+                <p>Plan de la machine.</p>
+                <a href="#">Ouvrir</a>
+            </div>
 
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>© 2026 - Documentation interne PMAF</p>
     </footer>
-
-    <script src="../script/pmaf.js"></script>
 
 </body>
 
