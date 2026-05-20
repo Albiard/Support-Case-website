@@ -6,7 +6,7 @@
     "Automate": "Omron",
     "type": "DEFAUT CAPTEUR",
     "Nom": "Capteur HS",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "1 - PMII - Alarme - Omron - DEFAUT CAPTEUR - Capteur HS - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -17,7 +17,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR DECELERATION SUR LIFE (DT01)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "2 - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR DECELERATION SUR LIFE (DT01) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -28,7 +28,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR PLATEAU EN POSITION SUR LIFE (DT02)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "3 - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR PLATEAU EN POSITION SUR LIFE (DT02) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -39,7 +39,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TOP PRISE N°1 (DT06)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "4 - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TOP PRISE N°1 (DT06) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -50,7 +50,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TOP ENLEVEMENT (DT05)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "5 - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TOP ENLEVEMENT (DT05) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -61,7 +61,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TOP PRISE N°2 (DT07)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": "6 - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TOP PRISE N°2 (DT07) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -72,7 +72,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TOP PRISE N°3 (DT08)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TOP PRISE N°3 (DT08) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -83,7 +83,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA1",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA1 -Vérifier que l'état des caméras"
   },
@@ -94,7 +94,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA2",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA2 -Vérifier que l'état des caméras"
   },
@@ -105,7 +105,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA3",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA3 -Vérifier que l'état des caméras"
   },
@@ -116,7 +116,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA4",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA4 -Vérifier que l'état des caméras"
   },
@@ -127,7 +127,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA5",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA5 -Vérifier que l'état des caméras"
   },
@@ -138,7 +138,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAMERA",
     "Nom": "DEFAUT CAMERA6",
-    "Cause": " - trop d'oeuf mort détecté \n - camera sale ou endommagée",
+    "Cause": "trop d'oeuf mort détecté \n camera sale ou endommagée",
     "Solution": "Vérifier que l'état des caméras",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAMERA - DEFAUT CAMERA6 -Vérifier que l'état des caméras"
   },
@@ -149,7 +149,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TOP MIRAGE (DT03)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TOP MIRAGE (DT03) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -160,7 +160,7 @@
     "Automate": "M340",
     "type": "DEFAUT CR PC_PLC",
     "Nom": "DEFAUT RETOUR CR PC_PLC",
-    "Cause": "Crash ou mauvais démarrage de l'application PC :\n - Mauvaise connexion du PC à l'automate\n - Mauvaise connexion des caméra à l'automate\n - Problème PC (Saturation mémoire, crash ...)",
+    "Cause": "Crash ou mauvais démarrage de l'application PC :\n Mauvaise connexion du PC à l'automate\n Mauvaise connexion des caméra à l'automate\n Problème PC (Saturation mémoire, crash ...)",
     "Solution": " Vérifier connexion des cables entre le PC, Camera et automate\n Redémarrer la machine",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CR PC_PLC - DEFAUT RETOUR CR PC_PLC - Vérifier connexion des cables entre le PC, Camera et automate\n Redémarrer la machine"
   },
@@ -171,7 +171,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR ESPACE LIBRE SORTIE MIRAGE (DT04)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR ESPACE LIBRE SORTIE MIRAGE (DT04) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -182,7 +182,7 @@
     "Automate": "M340",
     "type": "PLATEAU MAUVAIS SENS",
     "Nom": "PLATEAU DANS LE MAUVAIS SENS",
-    "Cause": " - Plateau dans le mauvais sens \n - problème capteur de sens de plateau",
+    "Cause": "Plateau dans le mauvais sens \n problème capteur de sens de plateau",
     "Solution": "Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU MAUVAIS SENS - PLATEAU DANS LE MAUVAIS SENS -Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé"
   },
@@ -204,7 +204,7 @@
     "Automate": "M340",
     "type": "DEFAUT COUPURE ALIMENTATION",
     "Nom": "DEFAUT COUPURE ALIMENTATION ENLEVEMENT#1",
-    "Cause": " - L'équipement concerné est passé en mode batterie",
+    "Cause": "L'équipement concerné est passé en mode batterie",
     "Solution": "Vérifier la bonne alimentation de l'équipement.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT COUPURE ALIMENTATION - DEFAUT COUPURE ALIMENTATION ENLEVEMENT#1 -Vérifier la bonne alimentation de l'équipement."
   },
@@ -215,7 +215,7 @@
     "Automate": "M340",
     "type": "DEFAUT PLATEAUX COLLES",
     "Nom": "DEFAUT PLATEAUX COLLES SOUS ENLEVEMENT",
-    "Cause": " - Plateau trop rapproché",
+    "Cause": "Plateau trop rapproché",
     "Solution": " Vidanger les plateau de la machine\n Vérifier le bon fonctionnement des capteurs de plateau de la ligne",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT PLATEAUX COLLES - DEFAUT PLATEAUX COLLES SOUS ENLEVEMENT - Vidanger les plateau de la machine\n Vérifier le bon fonctionnement des capteurs de plateau de la ligne"
   },
@@ -281,7 +281,7 @@
     "Automate": "M340",
     "type": "DEFAUT COUPURE ALIMENTATION",
     "Nom": "DEFAUT COUPURE ALIMENTATION SUR TRANSFERT",
-    "Cause": " - L'équipement concerné est passé en mode batterie",
+    "Cause": "L'équipement concerné est passé en mode batterie",
     "Solution": "Vérifier la bonne alimentation de l'équipement.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT COUPURE ALIMENTATION - DEFAUT COUPURE ALIMENTATION SUR TRANSFERT -Vérifier la bonne alimentation de l'équipement."
   },
@@ -292,7 +292,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TRANSFERT SORTI (DT06)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TRANSFERT SORTI (DT06) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -303,7 +303,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT CAPTEUR TRANSFERT RENTRE (DT05)",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT CAPTEUR TRANSFERT RENTRE (DT05) - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -325,7 +325,7 @@
     "Automate": "M340",
     "type": "PLATEAU COINCE",
     "Nom": "PLATEAU COINCE AVANT LIFE",
-    "Cause": " - Plateau coincé\n - Capteur de plateau activé trop longtemps",
+    "Cause": "Plateau coincé\n Capteur de plateau activé trop longtemps",
     "Solution": "Vérifier que aucun plateau n'est coincé\nVérifier que les capteurs de plateau fonctionne correctement et sont correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU COINCE - PLATEAU COINCE AVANT LIFE -Vérifier que aucun plateau n'est coincé\nVérifier que les capteurs de plateau fonctionne correctement et sont correctement réglé"
   },
@@ -336,7 +336,7 @@
     "Automate": "M340",
     "type": "PLATEAU MAUVAIS SENS",
     "Nom": "PLATEAU 1 DANS LE MAUVAIS SENS",
-    "Cause": " - Plateau dans le mauvais sens \n - problème capteur de sens de plateau",
+    "Cause": "Plateau dans le mauvais sens \n problème capteur de sens de plateau",
     "Solution": "Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU MAUVAIS SENS - PLATEAU 1 DANS LE MAUVAIS SENS -Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé"
   },
@@ -347,7 +347,7 @@
     "Automate": "M340",
     "type": "PLATEAU MAUVAIS SENS",
     "Nom": "PLATEAU 2 DANS LE MAUVAIS SENS",
-    "Cause": " - Plateau dans le mauvais sens \n - problème capteur de sens de plateau",
+    "Cause": "Plateau dans le mauvais sens \n problème capteur de sens de plateau",
     "Solution": "Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU MAUVAIS SENS - PLATEAU 2 DANS LE MAUVAIS SENS -Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé"
   },
@@ -358,7 +358,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "CAPTEURS DETECTION DE SENS MAL REGLES",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - CAPTEURS DETECTION DE SENS MAL REGLES - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -413,7 +413,7 @@
     "Automate": "M340",
     "type": "PLATEAU MAUVAIS SENS",
     "Nom": "PLATEAU 3 DANS LE MAUVAIS SENS",
-    "Cause": " - Plateau dans le mauvais sens \n - problème capteur de sens de plateau",
+    "Cause": "Plateau dans le mauvais sens \n problème capteur de sens de plateau",
     "Solution": "Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU MAUVAIS SENS - PLATEAU 3 DANS LE MAUVAIS SENS -Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé"
   },
@@ -501,7 +501,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N1 ENLEVEMENT#1",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N1 ENLEVEMENT#1 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -512,7 +512,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#1",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#1 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -523,7 +523,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#1",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#1 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -534,7 +534,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N1 ENLEVEMENT#2",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N1 ENLEVEMENT#2 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -545,7 +545,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#2",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#2 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -556,7 +556,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N3 ENLEVEMENT#1",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N3 ENLEVEMENT#1 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -567,7 +567,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N3 ENLEVEMENT#2",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N3 ENLEVEMENT#2 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -578,7 +578,7 @@
     "Automate": "M340",
     "type": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE",
     "Nom": "DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#2",
-    "Cause": "Pas de bit de vie détecté :\n - Mauvaise connexion à l'embase pneumatique\n -  Embase pneumatique défaillante",
+    "Cause": "Pas de bit de vie détecté :\n Mauvaise connexion à l'embase pneumatique\n  Embase pneumatique défaillante",
     "Solution": "Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT ESCLAVE EMBASE PNEUMATIQUE - DEFAUT ESCLAVE EMBASE PNEUMATIQUE N2 ENLEVEMENT#2 -Vérifier la connexion de l'embase pneumatique au PLC \nVérifier le bon fonctionnement"
   },
@@ -677,7 +677,7 @@
     "Automate": "M340",
     "type": "DEFAUT CR PC_PLC",
     "Nom": "DEFAUT RETOUR CR PC_PLC ACQUISITION",
-    "Cause": "Crash ou mauvais démarrage de l'application PC :\n - Mauvaise connexion du PC à l'automate\n - Mauvaise connexion des caméra à l'automate\n - Problème PC (Saturation mémoire, crash ...)",
+    "Cause": "Crash ou mauvais démarrage de l'application PC :\n Mauvaise connexion du PC à l'automate\n Mauvaise connexion des caméra à l'automate\n Problème PC (Saturation mémoire, crash ...)",
     "Solution": " Vérifier connexion des cables entre le PC, Camera et automate\n Redémarrer la machine",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CR PC_PLC - DEFAUT RETOUR CR PC_PLC ACQUISITION - Vérifier connexion des cables entre le PC, Camera et automate\n Redémarrer la machine"
   },
@@ -743,7 +743,7 @@
     "Automate": "M340",
     "type": "PLATEAU MAUVAIS SENS",
     "Nom": "DEFAUT SENS PLATEAU",
-    "Cause": " - Plateau dans le mauvais sens \n - problème capteur de sens de plateau",
+    "Cause": "Plateau dans le mauvais sens \n problème capteur de sens de plateau",
     "Solution": "Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé",
     "Recherche": " - PMAF - Alarme - M340 - PLATEAU MAUVAIS SENS - DEFAUT SENS PLATEAU -Vérifier que le plateau est dans le bon sens\nVérifier également que le capteur de sens de plateau est correctement réglé"
   },
@@ -754,7 +754,7 @@
     "Automate": "M340",
     "type": "DEFAUT COUPURE ALIMENTATION",
     "Nom": "DEFAUT COUPURE ALIMENTATION SUR MIRAGE",
-    "Cause": " - L'équipement concerné est passé en mode batterie",
+    "Cause": "L'équipement concerné est passé en mode batterie",
     "Solution": "Vérifier la bonne alimentation de l'équipement.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT COUPURE ALIMENTATION - DEFAUT COUPURE ALIMENTATION SUR MIRAGE -Vérifier la bonne alimentation de l'équipement."
   },
@@ -765,7 +765,7 @@
     "Automate": "M340",
     "type": "DEFAUT CAPTEUR",
     "Nom": "DEFAUT DETECTION PLATEAU SOUS MIRAGE",
-    "Cause": " - Capteur mal aligné, mal réglé ou défectueux.\n - Problème de câblage ou de connecteur empêchant une bonne détection.",
+    "Cause": "Capteur mal aligné, mal réglé ou défectueux.\n Problème de câblage ou de connecteur empêchant une bonne détection.",
     "Solution": " Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs.",
     "Recherche": " - PMAF - Alarme - M340 - DEFAUT CAPTEUR - DEFAUT DETECTION PLATEAU SOUS MIRAGE - Vérifier le fonctionnement du capteur via ses voyants.\nContrôler l’alignement, le réglage ainsi que l’état du câblage et des connecteurs."
   },
@@ -930,7 +930,7 @@
     "Automate": "M340",
     "type": "DEFAUT COUPURE ALIMENTATION",
     "Nom": "DEFAUT COUPURE ALIMENTATION ENLEVEMENT#2",
-    "Cause": " - L'équipement concerné est passé en mode batterie",
+    "Cause": "L'équipement concerné est passé en mode batterie",
     "Solution": "Vérifier la bonne alimentation de l'équipement.",
     "Recherche": " - PMAF - AlarmeE2 - M340 - DEFAUT COUPURE ALIMENTATION - DEFAUT COUPURE ALIMENTATION ENLEVEMENT#2 -Vérifier la bonne alimentation de l'équipement."
   },
@@ -952,7 +952,7 @@
     "Automate": "M340",
     "type": "DEFAUT PLATEAUX COLLES",
     "Nom": "DEFAUT PLATEAUX COLLES SOUS ENLEVEMENT#2",
-    "Cause": " - Plateau trop rapproché",
+    "Cause": "Plateau trop rapproché",
     "Solution": " Vidanger les plateau de la machine\n Vérifier le bon fonctionnement des capteurs de plateau de la ligne",
     "Recherche": " - PMAF - AlarmeE2 - M340 - DEFAUT PLATEAUX COLLES - DEFAUT PLATEAUX COLLES SOUS ENLEVEMENT#2 - Vidanger les plateau de la machine\n Vérifier le bon fonctionnement des capteurs de plateau de la ligne"
   },
