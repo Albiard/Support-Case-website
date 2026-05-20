@@ -90,51 +90,43 @@ function rechercherDefaut(machine) {
 /* ------------------------------
    AFFICHAGE RESULTATS
 ------------------------------ */
-
 function afficherResultats(resultats) {
-
     resultsDiv.innerHTML = "";
 
     if (resultats.length === 0) {
-
         resultsDiv.innerHTML = `
             <div class="card">
                 <p>AUCUN DÉFAUT TROUVÉ.</p>
             </div>
         `;
-
         return;
     }
 
     resultats.forEach(defaut => {
-
         const card = document.createElement("div");
-
-        card.classList.add("card");
+        card.classList.add("card", "result-item");
 
         card.innerHTML = `
-
             <h3>${defaut.Nom.toUpperCase()}</h3>
-
-            <p>
-                <strong>TYPE :</strong>
-                ${defaut.type.toUpperCase()}
-            </p>
-
-            <p>
-                <strong>CAUSE :</strong><br>
-                ${defaut.Cause.toUpperCase().replace(/\n/g, "<br>")}
-            </p>
-
-            <p>
-                <strong>SOLUTION :</strong><br>
-                ${defaut.Solution.toUpperCase().replace(/\n/g, "<br>")}
-            </p>
-
         `;
 
+        card.addEventListener("click", () => {
+            ouvrirPopupDefaut(defaut);
+        });
+
         resultsDiv.appendChild(card);
-
     });
+}
 
+function ouvrirPopupDefaut(defaut) {
+    document.getElementById("popupTitle").innerText = defaut.Nom.toUpperCase();
+    document.getElementById("popupType").innerText = defaut.type.toUpperCase();
+    document.getElementById("popupCause").innerHTML = defaut.Cause.toUpperCase().replace(/\n/g, "<br>");
+    document.getElementById("popupSolution").innerHTML = defaut.Solution.toUpperCase().replace(/\n/g, "<br>");
+
+    document.getElementById("popupDefaut").classList.add("active");
+}
+
+function fermerPopupDefaut() {
+    document.getElementById("popupDefaut").classList.remove("active");
 }
