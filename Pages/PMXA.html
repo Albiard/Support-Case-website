@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMXA</title>
+
     <link rel="stylesheet" href="../UI/style.css">
     <link rel="stylesheet" href="../UI/pmxa.css">
-
 
 </head>
 
 <body>
 
-    <header class = "hero">
-        <img src="./Images/CEVA logo Ecat iD campus-white.png" alt="Logo Ceva" class="logo-left">
+    <header class="hero">
+        <img src="./Images/CEVA logo Ecat iD campus-white.png"
+             alt="Logo Ceva"
+             class="logo-left">
 
         <h1>PMXA</h1>
     </header>
@@ -30,8 +32,13 @@
         <!-- ONGLETS -->
 
         <nav class="tabs">
-            <button class="tab-btn active" data-tab="defauts">Défauts</button>
-            <button class="tab-btn" data-tab="documentation">Documentation</button>
+            <button class="tab-btn active" data-tab="defauts">
+                Défauts
+            </button>
+
+            <button class="tab-btn" data-tab="documentation">
+                Documentation
+            </button>
         </nav>
 
         <!-- DEFAUTS -->
@@ -63,52 +70,96 @@
             <div class="doc-categories">
 
                 <div class="doc-card">
-                    <br>
                     <h3>📘 Schémas électriques</h3>
-                        <br>
-                        <a
-                            href="../Documentation/PMXA/SMXA-C01500.pdf"
-                            class="folder-frame"
-                            target ="_blank"
-                        >PDF Schéma électrique</a>
+                    <br>
+
+                    <a
+                        href="../Documentation/PMXA/SMXA-C01500.pdf"
+                        class="folder-frame"
+                        target="_blank"
+                    >
+                        PDF Schéma électrique
+                    </a>
                 </div>
-                <br>
+
+
                 <div class="doc-card">
                     <h3>🛠️ Schémas pneumatiques</h3>
                     <br>
-                    <a
 
-                            href="../Documentation/PMXA/SMXA-C01500P.pdf"
-                            class="folder-frame"
-                            target="_blank"
-                    >PDF Schéma pneumatique</a>
+                    <a
+                        href="../Documentation/PMXA/SMXA-C01500P.pdf"
+                        class="folder-frame"
+                        target="_blank"
+                    >
+                        PDF Schéma pneumatique
+                    </a>
                 </div>
-                <br>
+
+
                 <div class="doc-card">
                     <h3>📄 Notices utilisateur</h3>
-                        <br>
-                        <a
-                            href="../Documentation/PMXA/DOC01212_PMXA_C01500.pdf"
-                            class="folder-frame"
-                            target="_blank"
-                        >PDF Notice utilisateur</a>
-                    </div>
                     <br>
-                                    <div class="doc-card">
+
+                    <a
+                        href="../Documentation/PMXA/DOC01212_PMXA_C01500.pdf"
+                        class="folder-frame"
+                        target="_blank"
+                    >
+                        PDF Notice utilisateur
+                    </a>
+                </div>
+
+
+                <div class="doc-card">
                     <h3>📄 Pièces détachées</h3>
-                        <br>
-                        <a
-                            href="../Documentation/PMXA/DOC01212_PMXA_C01500.pdf"
-                            class="folder-frame"
-                            target="_blank"
-                        >PDF Pièces détachées</a>
-                    </div>
+                    <br>
+
+                    <a
+                        href="../Documentation/PMXA/DOC01212_PMXA_C01500.pdf"
+                        class="folder-frame"
+                        target="_blank"
+                    >
+                        PDF Pièces détachées
+                    </a>
                 </div>
 
             </div>
 
-
         </section>
+
+
+        <!-- POPUP -->
+
+        <div id="popupDefaut" class="popup-overlay">
+
+            <div class="popup-content">
+
+                <button class="popup-close"
+                        onclick="fermerPopupDefaut()">
+                    ×
+                </button>
+
+                <h2 id="popupTitle"></h2>
+
+                <p>
+                    <strong>📌 TYPE :</strong>
+                    <span id="popupType"></span>
+                </p>
+
+                <p>
+                    <strong>⚠️ CAUSE :</strong><br>
+                    <span id="popupCause"></span>
+                </p>
+
+                <p>
+                    <strong>🔍 SOLUTION :</strong><br>
+                    <span id="popupSolution"></span>
+                </p>
+
+            </div>
+
+        </div>
 
     </main>
 
@@ -119,5 +170,4 @@
     <script src="../script/pmxa.js"></script>
 
 </body>
-
 </html>
