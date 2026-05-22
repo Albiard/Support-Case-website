@@ -10,7 +10,7 @@ let defauts = [];
    CHARGEMENT JSON
 ------------------------------ */
 
-fetch("../donnees/bdd.json")
+fetch("../donnees/PMAF_bdd.json")
     .then(response => response.json())
     .then(data => {
         defauts = data;
