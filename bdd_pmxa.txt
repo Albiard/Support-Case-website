@@ -1,0 +1,2512 @@
+[
+  {
+    "Nom": "ArretUrgence",
+    "ID d'alarme": "Alarmes_Communes_ArretUrgence",
+    "Code de l'événement": "G001",
+    "Expression": "AlarmesCommunes.ArretUrgence",
+    "Message": "Défaut arrêt d'urgence",
+    "explication": "La boucle électrique d'arrêt d'urgence du relais de sécurité a été ouverte",
+    "cause": "- Au moins un bouton d'arrêt d'urgence a été enclenché\n- Si la machine vient d'être allumée, le défaut peut apparaître même si aucun bouton d'arrêt d'urgence n'a été enclenché",
+    "solution": "Vérifier que les arrêts d'urgence de la machine sont désenclenchés, que les portes sont fermées, et appuyer sur le bouton \"reset\""
+  },
+  {
+    "Nom": "DisjoncteurElectronique",
+    "ID d'alarme": "Alarmes_Communes_DisjoncteurElectronique",
+    "Code de l'événement": "G002",
+    "Expression": "AlarmesCommunes.DisjoncteurElectronique",
+    "Message": "Défaut disjoncteur éléctronique Q20",
+    "explication": "Une sortie du module de protection électronique Q20 s'est coupée car il y a eu une surintensité sur une de ses voies.",
+    "cause": "- Mauvais réglage de l'intensité de la voie (le voyant passe en orange, puis en rouge)\n- Court-circuit sur la voie (le voyant passe directement en rouge)",
+    "solution": "- Ajuster la protection thermique de la voie à l'aide de la vis proche du voyant\n- Eliminer le court-circuit puis appuyer sur le voyant du disjoncteur électronique pour réarmer la voie"
+  },
+  {
+    "Nom": "Onduleur",
+    "ID d'alarme": "Alarmes_Communes_Onduleur",
+    "Code de l'événement": "G003",
+    "Expression": "AlarmesCommunes.Onduleur",
+    "Message": "Défaut onduleur",
+    "explication": "L'onduleur est en défaut",
+    "cause": "L'onduleur est en défaut",
+    "solution": "Relever le défaut sur l'écran du l'onduleur et se référer à la documentation de celui-ci"
+  },
+  {
+    "Nom": "OnduleurSurBatterie",
+    "ID d'alarme": "Alarmes_Communes_OnduleurSurBatterie",
+    "Code de l'événement": "G004",
+    "Expression": "AlarmesCommunes.OnduleurSurBatterie",
+    "Message": "Onduleur sur batterie",
+    "explication": "L'onduleur ne détecte plus d'alimentation électrique et est passé en mode batterie, il renvoi un signal à l'automate",
+    "cause": "Coupure de l'alimentation électrique de la machine (volontaire ou non)",
+    "solution": "- Si le passage de l'onduleur sur batterie n'est pas normal ou n'est pas attendu, vérifier l'alimentation électrique de la machine jusqu’à l'onduleur.\n- Sinon, ne pas tenir compte de l'alarme, la machine va s'éteindre toute seule en quelques minutes."
+  },
+  {
+    "Nom": "Parafoudre",
+    "ID d'alarme": "Alarmes_Communes_Parafoudre",
+    "Code de l'événement": "G005",
+    "Expression": "AlarmesCommunes.Parafoudre",
+    "Message": "Défaut parafoudre",
+    "explication": "Le module parafoudre a au moins une cartouche hors service",
+    "cause": "Surtension soudaine et importante sur l'alimentation générale de la machine.",
+    "solution": "Remplacer la cartouche défectueuse."
+  },
+  {
+    "Nom": "PressionAir",
+    "ID d'alarme": "Alarmes_Communes_PressionAir",
+    "Code de l'événement": "G006",
+    "Expression": "AlarmesCommunes.PressionAir",
+    "Message": "Défaut pressostat",
+    "explication": "Le capteur de pression d'air général de la machine est hors plage de fonctionnement",
+    "cause": "- Il  n'y a pas d'air sur la machine (attention, le pressostat est situé en aval de la vanne de coupure générale), ou pas suffisamment\n- Le capteur de pression d'air est défectueux ou non alimenté",
+    "solution": "- Vérifier la présence d'air comprimé en entrée de machine et que celle-ci soit dans la plage de tolérance acceptée\n- Si la valeur affichée à l'IHM est égale à 0 mais qu'il y a de l'air, vérifier que le capteur de pression est correctement alimenté électriquement. Si c'est le cas, remplacer-le."
+  },
+  {
+    "Nom": "Tension",
+    "ID d'alarme": "Alarmes_Communes_Tension",
+    "Code de l'événement": "G007",
+    "Expression": "AlarmesCommunes.Tension",
+    "Message": "Défaut tension",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "BatterieFaible",
+    "ID d'alarme": "Alarmes_Communes_BatterieFaible",
+    "Code de l'événement": "G008",
+    "Expression": "AlarmesCommunes.BatterieFaible",
+    "Message": "Batterie faible onduleur",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "PasDePremierDemarrageValid",
+    "ID d'alarme": "Alarmes_Communes_PasDePremierDemarrageValid",
+    "Code de l'événement": "G009",
+    "Expression": "AlarmesCommunes.PasDePremierDemarrageValide",
+    "Message": "Premier démarrage non effectué",
+    "explication": "L'automate détecte qu'il n'y a pas de valeurs dans les paramètres",
+    "cause": "L'automate a perdu ses données",
+    "solution": "Contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetecttionPendantStressTest",
+    "ID d'alarme": "Alarmes_Communes_DetecttionPendantStressTest",
+    "Code de l'événement": "G010",
+    "Expression": "Alarmes.DetectionPendantStressTest",
+    "Message": "Défaut Détection contenant, Stress test stoppé",
+    "explication": "Pendant le mode stress test, un capteur a détecté quelque chose et le mode s'est stoppé",
+    "cause": "Quelque chose est passé devant un capteur pendant le mode stress test",
+    "solution": "Vérifier les capteurs"
+  },
+  {
+    "Nom": "Com_Noeud1",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud1",
+    "Code de l'événement": "EC003",
+    "Expression": "Alarmes.ComEthercat_Noeud1",
+    "Message": "Défaut de communication avec le noeud 1 : Port 1 du switch Ethercat",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud2",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud2",
+    "Code de l'événement": "EC004",
+    "Expression": "Alarmes.ComEthercat_Noeud2",
+    "Message": "Défaut de communication avec le noeud 2 : Port 2 du switch Ethercat",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud30",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud30",
+    "Code de l'événement": "EC005",
+    "Expression": "Alarmes.ComEthercat_Noeud30",
+    "Message": "Défaut de communication avec le noeud 30 : Variateur Convoyeur ligne de tri",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud31",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud31",
+    "Code de l'événement": "EC006",
+    "Expression": "Alarmes.ComEthercat_Noeud31",
+    "Message": "Défaut de communication avec le noeud 31 : Variateur Convoyeur separateur",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud32",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud32",
+    "Code de l'événement": "EC007",
+    "Expression": "Alarmes.ComEthercat_Noeud32",
+    "Message": "Défaut de communication avec le noeud 32 : Variateur Oscillation separateur",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud33",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud33",
+    "Code de l'événement": "EC008",
+    "Expression": "Alarmes.ComEthercat_Noeud33",
+    "Message": "Défaut de communication avec le noeud 33 : Variateur Convoyeur accelerateur",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud34",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud34",
+    "Code de l'événement": "EC009",
+    "Expression": "Alarmes.ComEthercat_Noeud34",
+    "Message": "Défaut de communication avec le noeud 34 : Variateur Oscillation accelerateur",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud35",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud35",
+    "Code de l'événement": "EC010",
+    "Expression": "Alarmes.ComEthercat_Noeud35",
+    "Message": "Défaut de communication avec le noeud 35 : Variateur Convoyeur acquisition",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud36",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud36",
+    "Code de l'événement": "EC011",
+    "Expression": "Alarmes.ComEthercat_Noeud36",
+    "Message": "Défaut de communication avec le noeud 36 : Variateur Oscillation acquisition",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud50",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud50",
+    "Code de l'événement": "EC012",
+    "Expression": "Alarmes.ComEthercat_Noeud50",
+    "Message": "Défaut de communication avec le noeud 50 : Variateur Convoyeur entrée",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Nb_TentativeResetAuto",
+    "ID d'alarme": "Alarmes_Ethercat_Nb_TentativeResetAuto",
+    "Code de l'événement": "EC002",
+    "Expression": "Alarmes.NbreResetAtteint",
+    "Message": "Défaut de communication Ethercat : nombre de tentatives de reset automatique atteint",
+    "explication": "L'automate a essayé 5 fois de réarmer automatiquement un défaut sur le réseau Ethercat sans y parvenir. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "Impossibilité de réarmer l'esclave Ethercat",
+    "solution": "- Vérifier l'état des esclaves Ethercat\n- Si aucun défaut n'apparait sur aucun esclave Ethercat, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Com_Ethercat",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Ethercat",
+    "Code de l'événement": "EC001",
+    "Expression": "Alarmes.ComEthercat",
+    "Message": "Défaut de communication sur réseau Ethercat",
+    "explication": "Il y a un défaut de communication entre l'automate et un esclave sur le réseau Ethercat (variateur, station déportée, …). Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier la bonne connexion des câbles du réseau Ethercat en suivant le schéma électrique\n- Vérifier la bonne alimentation des différents esclaves sur le réseau Ethercat - Si aucun défaut n'apparait sur aucun esclave Ethercat, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Com_Noeud51",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud51",
+    "Code de l'événement": "EC008",
+    "Expression": "Alarmes.ComEthercat_Noeud51",
+    "Message": "Défaut de communication avec le noeud 51 : Variateur Convoyeur entrée 2",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud60",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud60",
+    "Code de l'événement": "EC009",
+    "Expression": "Alarmes.ComEthercat_Noeud60",
+    "Message": "Défaut de communication avec le noeud 60 : Variateur Convoyeur sortie poussin sous aiguillage",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud61",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud61",
+    "Code de l'événement": "EC010",
+    "Expression": "Alarmes.ComEthercat_Noeud61",
+    "Message": "Défaut de communication avec le noeud 61 : Variateur Convoyeur sortie 2",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud62",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud62",
+    "Code de l'événement": "EC011",
+    "Expression": "Alarmes.ComEthercat_Noeud62",
+    "Message": "Défaut de communication avec le noeud 62 : Variateur Convoyeur sortie 3",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud63",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud63",
+    "Code de l'événement": "EC012",
+    "Expression": "Alarmes.ComEthercat_Noeud63",
+    "Message": "Défaut de communication avec le noeud 63 : Variateur Convoyeur sortie 4",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud20",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud20",
+    "Code de l'événement": "EC004",
+    "Expression": "Alarmes.ComEthercat_Noeud20",
+    "Message": "Défaut de communication avec le noeud 20 : Module Wago (entrées / sorties deportées)",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud52",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud52",
+    "Code de l'événement": "EC008",
+    "Expression": "Alarmes.ComEthercat_Noeud52",
+    "Message": "Défaut de communication avec le noeud 52 : Variateur Convoyeur entrée 3",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "Com_Noeud53",
+    "ID d'alarme": "Alarmes_Ethercat_Com_Noeud53",
+    "Code de l'événement": "EC008",
+    "Expression": "Alarmes.ComEthercat_Noeud53",
+    "Message": "Défaut de communication avec le noeud 53 : Variateur Convoyeur entrée 4",
+    "explication": "Il y a un défaut de communication avec l'esclave Ethercat indiqué. Le voyant rouge du port Ethercat de l'automate clignote en rouge.",
+    "cause": "- Une mauvaise connexion d'un câble Ethercat\n- L'esclave Ethercat n'est pas alimenté\n- Défaut du port Ethercat de l'automate",
+    "solution": "- Vérifier l'état de l'esclave Ethercat en question à l'aide de la page de visualisation depuis l'IHM.\n- Si aucun défaut n'apparait sur l'esclave Ethercat, contacter ECATID"
+  },
+  {
+    "Nom": "CarteMod1",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod1",
+    "Code de l'événement": "ES001",
+    "Expression": "Alarmes.CarteMod1",
+    "Message": "Défaut sur la carte MOD 1 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod2",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod2",
+    "Code de l'événement": "ES002",
+    "Expression": "Alarmes.CarteMod2",
+    "Message": "Défaut sur la carte MOD 2 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod3",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod3",
+    "Code de l'événement": "ES003",
+    "Expression": "Alarmes.CarteMod3",
+    "Message": "Défaut sur la carte MOD 3 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod4",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod4",
+    "Code de l'événement": "ES004",
+    "Expression": "Alarmes.CarteMod4",
+    "Message": "Défaut sur la carte MOD 4 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod5",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod5",
+    "Code de l'événement": "ES005",
+    "Expression": "Alarmes.CarteMod5",
+    "Message": "Défaut sur la carte MOD 5 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod6",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod6",
+    "Code de l'événement": "ES006",
+    "Expression": "Alarmes.CarteMod6",
+    "Message": "Défaut sur la carte MOD 6 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod7",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod7",
+    "Code de l'événement": "ES007",
+    "Expression": "Alarmes.CarteMod7",
+    "Message": "Défaut sur la carte MOD 7 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod8",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod8",
+    "Code de l'événement": "ES008",
+    "Expression": "Alarmes.CarteMod8",
+    "Message": "Défaut sur la carte MOD 8 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod9",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod9",
+    "Code de l'événement": "ES009",
+    "Expression": "Alarmes.CarteMod9",
+    "Message": "Défaut sur la carte MOD 9 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod10",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod10",
+    "Code de l'événement": "ES010",
+    "Expression": "Alarmes.CarteMod10",
+    "Message": "Défaut sur la carte MOD 10 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "CarteMod11",
+    "ID d'alarme": "Alarmes_Carte_ES_CarteMod11",
+    "Code de l'événement": "ES011",
+    "Expression": "Alarmes.CarteMod11",
+    "Message": "Défaut sur la carte MOD 11 - Résoudre le problème, éteindre la machine et redémarrer après 30s",
+    "explication": "L'automate ne communique pas avec la carte MOD X.",
+    "cause": "- Mauvaise connexion de la carte sur le rack automate\n- Problème d'alimentation de la carte\n- Carte automate HS",
+    "solution": "- Vérifier la connexion de la carte\n- Vérifier que la carte est bien alimentée - Remplacer la carte"
+  },
+  {
+    "Nom": "IntConvoyeurLigneDeTri",
+    "ID d'alarme": "Alarmes_Programme_IntConvoyeurLigneDeTri",
+    "Code de l'événement": "A001",
+    "Expression": "Alarmes.IntConvoyeurLigneDeTri",
+    "Message": "Défaut intensité Convoyeur ligne de tri",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvoyeurLigneDeTri",
+    "ID d'alarme": "Alarmes_Programme_ConvoyeurLigneDeTri",
+    "Code de l'événement": "A002",
+    "Expression": "Alarmes.ConvoyeurLigneDeTri",
+    "Message": "Défaut Convoyeur ligne de tri",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvoyeurSeparateur",
+    "ID d'alarme": "Alarmes_Programme_IntConvoyeurSeparateur",
+    "Code de l'événement": "A003",
+    "Expression": "Alarmes.IntConvoyeurSeparateur",
+    "Message": "Défaut intensité Convoyeur séparateur",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvoyeurSeparateur",
+    "ID d'alarme": "Alarmes_Programme_ConvoyeurSeparateur",
+    "Code de l'événement": "A004",
+    "Expression": "Alarmes.ConvoyeurSeparateur",
+    "Message": "Défaut Convoyeur séparateur",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvoyeurAccelerateur",
+    "ID d'alarme": "Alarmes_Programme_IntConvoyeurAccelerateur",
+    "Code de l'événement": "A005",
+    "Expression": "Alarmes.IntConvoyeurAccelerateur",
+    "Message": "Défaut intensité Convoyeur accélérateur",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvoyeurAccelerateur",
+    "ID d'alarme": "Alarmes_Programme_ConvoyeurAccelerateur",
+    "Code de l'événement": "A006",
+    "Expression": "Alarmes.ConvoyeurAccelerateur",
+    "Message": "Défaut Convoyeur accélérateur",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntOscillationConvoyeurAccelerateur",
+    "ID d'alarme": "Alarmes_Programme_IntOscillationConvoyeurAccelerateur",
+    "Code de l'événement": "A007",
+    "Expression": "Alarmes.IntOscillationConvoyeurAccelerateur",
+    "Message": "Défaut intensité Oscillation convoyeur accélérateur",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "OscillationConvoyeurAccelerateur",
+    "ID d'alarme": "Alarmes_Programme_OscillationConvoyeurAccelerateur",
+    "Code de l'événement": "A008",
+    "Expression": "Alarmes.OscillationConvoyeurAccelerateur",
+    "Message": "Défaut Oscillation convoyeur accélérateur",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvoyeurAcquisition",
+    "ID d'alarme": "Alarmes_Programme_IntConvoyeurAcquisition",
+    "Code de l'événement": "A009",
+    "Expression": "Alarmes.IntConvoyeurAcquisition",
+    "Message": "Défaut intensité Convoyeur acquisition",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvoyeurAcquisition",
+    "ID d'alarme": "Alarmes_Programme_ConvoyeurAcquisition",
+    "Code de l'événement": "A010",
+    "Expression": "Alarmes.ConvoyeurAcquisition",
+    "Message": "Défaut Convoyeur acquisition",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntOscillationConvoyeurAcquisition",
+    "ID d'alarme": "Alarmes_Programme_IntOscillationConvoyeurAcquisition",
+    "Code de l'événement": "A011",
+    "Expression": "Alarmes.IntOscillationConvoyeurAcquisition",
+    "Message": "Défaut intensité Oscillation convoyeur acquisition",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "OscillationConvoyeurAcquisition",
+    "ID d'alarme": "Alarmes_Programme_OscillationConvoyeurAcquisition",
+    "Code de l'événement": "A012",
+    "Expression": "Alarmes.OscillationConvoyeurAcquisition",
+    "Message": "Défaut Oscillation convoyeur acquisition",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvoyeurSortie",
+    "ID d'alarme": "Alarmes_Programme_IntConvoyeurSortie",
+    "Code de l'événement": "A013",
+    "Expression": "Alarmes.IntConvoyeurSortie",
+    "Message": "Défaut intensité Convoyeur de sortie",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvoyeurSortie",
+    "ID d'alarme": "Alarmes_Programme_ConvoyeurSortie",
+    "Code de l'événement": "A014",
+    "Expression": "Alarmes.ConvoyeurSortie",
+    "Message": "Défaut Convoyeur de sortie",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "DisjElecQ121",
+    "ID d'alarme": "Alarmes_Programme_DisjElecQ121",
+    "Code de l'événement": "A015",
+    "Expression": "Alarmes.DisjoncteurElecQ121",
+    "Message": "Défaut disjoncteur éléctronique Q121",
+    "explication": "Une sortie du module de protection électronique Q121 s'est coupée car il y a eu une surintensité sur une de ses voies.",
+    "cause": "- Mauvais réglage de l'intensité de la voie (le voyant passe en orange, puis en rouge)\n- Court-circuit sur la voie (le voyant passe directement en rouge)",
+    "solution": "- Ajuster la protection thermique de la voie à l'aide de la vis proche du voyant\n- Eliminer le court-circuit puis appuyer sur le voyant du disjoncteur électronique pour réarmer la voie"
+  },
+  {
+    "Nom": "DisjElecQ221",
+    "ID d'alarme": "Alarmes_Programme_DisjElecQ221",
+    "Code de l'événement": "A016",
+    "Expression": "Alarmes.DisjoncteurElecQ221",
+    "Message": "Défaut disjoncteur éléctronique Q221",
+    "explication": "Une sortie du module de protection électronique Q221 s'est coupée car il y a eu une surintensité sur une de ses voies.",
+    "cause": "- Mauvais réglage de l'intensité de la voie (le voyant passe en orange, puis en rouge)\n- Court-circuit sur la voie (le voyant passe directement en rouge)",
+    "solution": "- Ajuster la protection thermique de la voie à l'aide de la vis proche du voyant\n- Eliminer le court-circuit puis appuyer sur le voyant du disjoncteur électronique pour réarmer la voie"
+  },
+  {
+    "Nom": "DisjElecQ321",
+    "ID d'alarme": "Alarmes_Programme_DisjElecQ321",
+    "Code de l'événement": "A017",
+    "Expression": "Alarmes.DisjoncteurElecQ321",
+    "Message": "Défaut disjoncteur éléctronique Q321",
+    "explication": "Une sortie du module de protection électronique Q321 s'est coupée car il y a eu une surintensité sur une de ses voies.",
+    "cause": "- Mauvais réglage de l'intensité de la voie (le voyant passe en orange, puis en rouge)\n- Court-circuit sur la voie (le voyant passe directement en rouge)",
+    "solution": "- Ajuster la protection thermique de la voie à l'aide de la vis proche du voyant\n- Eliminer le court-circuit puis appuyer sur le voyant du disjoncteur électronique pour réarmer la voie"
+  },
+  {
+    "Nom": "CapteurGoulotteAiguillage",
+    "ID d'alarme": "Alarmes_Programme_CapteurGoulotteAiguillage",
+    "Code de l'événement": "A018",
+    "Expression": "Alarmes.CapteurGoulotteAiguillage",
+    "Message": "Goulotte aiguillage pas en position ou capteur HS",
+    "explication": "La bonne position de la goulotte d'aiguillage en sortie de la machine peut être contrôlée par :\n- un capteur inductif\n- un capteur de sécurité rectangulaire (jaune)\n- les 2",
+    "cause": "- Mauvais réglage du / des capteur(s)\n- Goulotte mal positionnée\n- Dysfonctionnement du / des capteur(s)",
+    "solution": "- Vérifier le bon réglage du / des capteur(s)\n- Vérifier la bonne position de la goulotte - Changer le(s) capteur(s) défectueux"
+  },
+  {
+    "Nom": "CapteurOscillationAccelerateurModeConvoyeur",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationAccelerateurModeConvoyeur",
+    "Code de l'événement": "A020",
+    "Expression": "Alarmes.CapteurOscillationAccelerateurModeConvoyeur",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur accélérateur en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode convoyeur, les systèmes d'oscillation doivent aller en petite vitesse jusqu'au capteur, puis les dépasser légèrement",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé\n- Dysfonctionnement du capteur",
+    "solution": "(- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "CapteurOscillationAccelerateurModeSexage",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationAccelerateurModeSexage",
+    "Code de l'événement": "A021",
+    "Expression": "Alarmes.CapteurOscillationAccelerateurModeSexage",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur accélérateur en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode sexage, les systèmes d'oscillation tournent et donc le capteur doit souvent changer d'état",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé\n- Dysfonctionnement du capteur",
+    "solution": "(- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "CapteurOscillationAcquisitionModeConvoyeur",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationAcquisitionModeConvoyeur",
+    "Code de l'événement": "A022",
+    "Expression": "Alarmes.CapteurOscillationAcquisitionModeConvoyeur",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur acquisition en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode convoyeur, les systèmes d'oscillation doivent aller en petite vitesse jusqu'au capteur, puis les dépasser légèrement",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé\n- Dysfonctionnement du capteur",
+    "solution": "(- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "CapteurOscillationAcquisitionModeSexage",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationAcquisitionModeSexage",
+    "Code de l'événement": "A023",
+    "Expression": "Alarmes.CapteurOscillationAcquisitionModeSexage",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur acquisition en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode sexage, les systèmes d'oscillation tournent et donc le capteur doit souvent changer d'état",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé\n- Dysfonctionnement du capteur",
+    "solution": "(- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "TemperatureArmoireElevee",
+    "ID d'alarme": "Alarmes_Programme_TemperatureArmoireElevee",
+    "Code de l'événement": "A024",
+    "Expression": "Alarmes.TemperatureArmoire_Elevee",
+    "Message": "Température armoire électrique élevée",
+    "explication": "La température dans l'armoire électrique est surveillée à l'aide d'un capteur situé dans celle-ci ",
+    "cause": "Mauvaise ventilation de l'armoire",
+    "solution": "- Vérifier le bon fonctionnement des ventilateurs\n- Nettoyer et / ou changer les filtres si nécessaire"
+  },
+  {
+    "Nom": "TemperatureArmoireComErreur",
+    "ID d'alarme": "Alarmes_Programme_TemperatureArmoireComErreur",
+    "Code de l'événement": "A025",
+    "Expression": "Alarmes.TemperatureArmoire_ComError",
+    "Message": "Erreur de communication capteur température armoire électrique",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureB10Elevee",
+    "ID d'alarme": "Alarmes_Programme_TemperatureB10Elevee",
+    "Code de l'événement": "A026",
+    "Expression": "Alarmes.TemperatureB10_Elevee",
+    "Message": "Température armoire informatique élevée",
+    "explication": "La température dans l'armoire informatique est surveillée à l'aide d'un capteur situé dans celle-ci ",
+    "cause": "Mauvais refroidissement de l'armoire",
+    "solution": "Vérifier le bon fonctionnement du système de refroidissement de l'armoire"
+  },
+  {
+    "Nom": "TemperatureB10ComErreur",
+    "ID d'alarme": "Alarmes_Programme_TemperatureB10ComErreur",
+    "Code de l'événement": "A027",
+    "Expression": "Alarmes.TemperatureB10_ComError",
+    "Message": "Erreur de communication capteur température armoire informatique",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "PressionAirComErreur",
+    "ID d'alarme": "Alarmes_Programme_PressionAirComErreur",
+    "Code de l'événement": "A028",
+    "Expression": "Alarmes.PressionAirComErreur",
+    "Message": "Erreur de communication capteur pression d'air",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "IntConvVersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_IntConvVersCompteuse",
+    "Code de l'événement": "A031",
+    "Expression": "Alarmes.IntConvVersCompteuse",
+    "Message": "Défaut intensité Convoyeur vers compteuse",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvVersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_ConvVersCompteuse",
+    "Code de l'événement": "A032",
+    "Expression": "Alarmes.ConvVersCompteuse",
+    "Message": "Défaut Convoyeur vers compteuse",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "ThermiqueConvSeparateur",
+    "ID d'alarme": "Alarmes_Programme_ThermiqueConvSeparateur",
+    "Code de l'événement": "A034",
+    "Expression": "Alarmes.ThermiqueConvSeparateur",
+    "Message": "Défaut protection thermique moteur convoyeur séparateur",
+    "explication": "Une information est renvoyée par le moteur à l'automate, en plus des retours déjà fait par le variateur. Il n'y a cette information que pour les moteurs Interoll qui sont à l'intérieur de la machine.",
+    "cause": "- Blocage mécanique\n- Mauvais contact au niveau de l'information remontée à l'automate",
+    "solution": "- Vérifier la mécanique\n- Vérifier le câblage"
+  },
+  {
+    "Nom": "ThermiqueConvAccelerateur",
+    "ID d'alarme": "Alarmes_Programme_ThermiqueConvAccelerateur",
+    "Code de l'événement": "A035",
+    "Expression": "Alarmes.ThermiqueConvAccelerateur",
+    "Message": "Défaut protection thermique moteur convoyeur accélérateur",
+    "explication": "Une information est renvoyée par le moteur à l'automate, en plus des retours déjà fait par le variateur. Il n'y a cette information que pour les moteurs Interoll qui sont à l'intérieur de la machine.",
+    "cause": "- Blocage mécanique\n- Mauvais contact au niveau de l'information remontée à l'automate",
+    "solution": "- Vérifier la mécanique\n- Vérifier le câblage"
+  },
+  {
+    "Nom": "ThermiqueConvAcquisition",
+    "ID d'alarme": "Alarmes_Programme_ThermiqueConvAcquisition",
+    "Code de l'événement": "A036",
+    "Expression": "Alarmes.ThermiqueConvAcquisition",
+    "Message": "Défaut protection thermique moteur convoyeur acquisition",
+    "explication": "Une information est renvoyée par le moteur à l'automate, en plus des retours déjà fait par le variateur. Il n'y a cette information que pour les moteurs Interoll qui sont à l'intérieur de la machine.",
+    "cause": "- Blocage mécanique\n- Mauvais contact au niveau de l'information remontée à l'automate",
+    "solution": "- Vérifier la mécanique\n- Vérifier le câblage"
+  },
+  {
+    "Nom": "IntConvElevateurSortie",
+    "ID d'alarme": "Alarmes_Programme_IntConvElevateurSortie",
+    "Code de l'événement": "A039",
+    "Expression": "Alarmes.IntConvElevateurSortie",
+    "Message": "Défaut intensité Convoyeur élévateur sortie",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvElevateurSortie",
+    "ID d'alarme": "Alarmes_Programme_ConvElevateurSortie",
+    "Code de l'événement": "A040",
+    "Expression": "Alarmes.ConvElevateurSortie",
+    "Message": "Défaut Convoyeur élévateur sortie",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvElevateur2",
+    "ID d'alarme": "Alarmes_Programme_IntConvElevateur2",
+    "Code de l'événement": "A041",
+    "Expression": "Alarmes.IntConvElevateur2",
+    "Message": "Défaut intensité Convoyeur élévateur sortie 2",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvElevateur2",
+    "ID d'alarme": "Alarmes_Programme_ConvElevateur2",
+    "Code de l'événement": "A042",
+    "Expression": "Alarmes.ConvElevateur2",
+    "Message": "Défaut Convoyeur élévateur sortie 2",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntOscillationConvoyeurSeparateur",
+    "ID d'alarme": "Alarmes_Programme_IntOscillationConvoyeurSeparateur",
+    "Code de l'événement": "A043",
+    "Expression": "Alarmes.IntOscillationConvoyeurSeparateur",
+    "Message": "Défaut intensité Oscillation convoyeur séparateur",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "OscillationConvoyeurSeparateur",
+    "ID d'alarme": "Alarmes_Programme_OscillationConvoyeurSeparateur",
+    "Code de l'événement": "A044",
+    "Expression": "Alarmes.OscillationConvoyeurSeparateur",
+    "Message": "Défaut Oscillation convoyeur séparateur",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "TemperatureBoitierCameraElevee",
+    "ID d'alarme": "Alarmes_Programme_TemperatureBoitierCameraElevee",
+    "Code de l'événement": "A045",
+    "Expression": "Alarmes.TemperatureBoitierCamera_Elevee",
+    "Message": "Température boitier caméra élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureBoitierCameraComErreur",
+    "ID d'alarme": "Alarmes_Programme_TemperatureBoitierCameraComErreur",
+    "Code de l'événement": "A046",
+    "Expression": "Alarmes.TemperatureBoitierCamera_ComError",
+    "Message": "Erreur de communication capteur température boitier caméra",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurOscillationSeparateurModeConvoyeur",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationSeparateurModeConvoyeur",
+    "Code de l'événement": "A047",
+    "Expression": "Alarmes.CapteurOscillationSeparateurModeConvoyeur",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur séparateur en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode convoyeur, les systèmes d'oscillation doivent aller en petite vitesse jusqu'au capteur, puis les dépasser légèrement",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé - Dysfonctionnement du capteur",
+    "solution": "- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "CapteurOscillationSeparateurModeSexage",
+    "ID d'alarme": "Alarmes_Programme_CapteurOscillationSeparateurModeSexage",
+    "Code de l'événement": "A048",
+    "Expression": "Alarmes.CapteurOscillationSeparateurModeSexage",
+    "Message": "Pas de détection du capteur système d'oscillation convoyeur séparateur en position basse, vérifier le capteur ou la pièce mécanique",
+    "explication": "En mode sexage, les systèmes d'oscillation tournent et donc le capteur doit souvent changer d'état",
+    "cause": "- Mauvais réglage du drapeau de détection\n- Capteur mal réglé - Dysfonctionnement du capteur",
+    "solution": "- Vérifier le positionnement du drapeau de détection\n- Vérifier le bon réglage du capteur - Changer le capteur s'il est défectueux"
+  },
+  {
+    "Nom": "IntConvEntreSortieEtElevateur",
+    "ID d'alarme": "Alarmes_Programme_IntConvEntreSortieEtElevateur",
+    "Code de l'événement": "A049",
+    "Expression": "Alarmes.IntConvEntreSortieEtElevateur",
+    "Message": "Défaut intensité Convoyeur avant élévateur",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvEntreSortieEtElevateur",
+    "ID d'alarme": "Alarmes_Programme_ConvEntreSortieEtElevateur",
+    "Code de l'événement": "A050",
+    "Expression": "Alarmes.ConvEntreSortieEtElevateur",
+    "Message": "Défaut Convoyeur avant élévateur",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvEntreeLigneDeTri",
+    "ID d'alarme": "Alarmes_Programme_IntConvEntreeLigneDeTri",
+    "Code de l'événement": "A051",
+    "Expression": "Alarmes.IntConvEntreeLigneDeTri",
+    "Message": "Défaut intensité convoyeur entrée ligne de tri",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvEntreeLigneDeTri",
+    "ID d'alarme": "Alarmes_Programme_ConvEntreeLigneDeTri",
+    "Code de l'événement": "A052",
+    "Expression": "Alarmes.ConvEntreeLigneDeTri",
+    "Message": "Défaut convoyeur entrée ligne de tri",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvEntreeBypass",
+    "ID d'alarme": "Alarmes_Programme_IntConvEntreeBypass",
+    "Code de l'événement": "A053",
+    "Expression": "Alarmes.IntConvEntreeBypass",
+    "Message": "Défaut intensité convoyeur entrée bypass",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvEntreeBypass",
+    "ID d'alarme": "Alarmes_Programme_ConvEntreeBypass",
+    "Code de l'événement": "A054",
+    "Expression": "Alarmes.ConvEntreeBypass",
+    "Message": "Défaut convoyeur entrée bypass",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "IntConvEntreeVersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_IntConvEntreeVersCompteuse",
+    "Code de l'événement": "A055",
+    "Expression": "Alarmes.IntConvEntreeVersCompteuse",
+    "Message": "Défaut intensité convoyeur entrée vers compteuse",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "ConvEntreeVersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_ConvEntreeVersCompteuse",
+    "Code de l'événement": "A056",
+    "Expression": "Alarmes.ConvEntreeVersCompteuse",
+    "Message": "Défaut convoyeur entrée vers compteuse",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "Porte1Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte1Ouverte",
+    "Code de l'événement": "A059",
+    "Expression": "Alarmes.Porte01Ouverte",
+    "Message": "Porte de sécurité 1 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "Porte2Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte2Ouverte",
+    "Code de l'événement": "A060",
+    "Expression": "Alarmes.Porte02Ouverte",
+    "Message": "Porte de sécurité 2 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "Porte3Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte3Ouverte",
+    "Code de l'événement": "A061",
+    "Expression": "Alarmes.Porte03Ouverte",
+    "Message": "Porte de sécurité 3 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "Porte4Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte4Ouverte",
+    "Code de l'événement": "A062",
+    "Expression": "Alarmes.Porte04Ouverte",
+    "Message": "Porte de sécurité 4 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "Porte5Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte5Ouverte",
+    "Code de l'événement": "A063",
+    "Expression": "Alarmes.Porte05Ouverte",
+    "Message": "Porte de sécurité 5 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "Porte6Ouverte",
+    "ID d'alarme": "Alarmes_Programme_Porte6Ouverte",
+    "Code de l'événement": "A064",
+    "Expression": "Alarmes.Porte06Ouverte",
+    "Message": "Porte de sécurité 6 ouverte",
+    "explication": "Chaque porte de la machine est équipée d'un capteur pour vérifier que celle-ci est bien fermée",
+    "cause": "- La porte indiquée est ouverte\n- Le capteur est mal réglé - Le capteur est défectueux",
+    "solution": "- Vérifier que la porte indiquée est bien fermée\n- Vérifier le bon alignement du capteur sur la porte avec la partie fixe sur la machine - Remplacer le capteur"
+  },
+  {
+    "Nom": "EchangeurThermiqueDefaut1",
+    "ID d'alarme": "Alarmes_Programme_EchangeurThermiqueDefaut1",
+    "Code de l'événement": "A057",
+    "Expression": "Alarmes.EchangeurThermiqueDefaut1",
+    "Message": "Défaut 1 échangeur thermique : Défaut général",
+    "explication": "Quand la machine est équipée d'un système de refroidissement, ce défaut indique que quelque chose ne va pas au niveau de l'échangeur thermique",
+    "cause": "Dépend du code d'erreur affiché sur l'échangeur thermique",
+    "solution": "Se référer à la doc technique de l'échangeur thermique"
+  },
+  {
+    "Nom": "EchangeurThermiqueDefaut2",
+    "ID d'alarme": "Alarmes_Programme_EchangeurThermiqueDefaut2",
+    "Code de l'événement": "A058",
+    "Expression": "Alarmes.EchangeurThermiqueDefaut2",
+    "Message": "Défaut 2 échangeur thermique : Température armoire trop élevée",
+    "explication": "Quand la machine est équipée d'un système de refroidissement, ce défaut indique que la température dans l'armoire est trop élevée. Le système n'arrive pas à refroidir suffisamment l'armoire informatique",
+    "cause": "- Environnement défavorable (chaleur trop élevée dans la pièce)\n- Echangeur défectueux qui ne refroidit pas assez l'armoire",
+    "solution": "- Inspecter l'échangeur thermique\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "GroupeFroidDefaut1",
+    "ID d'alarme": "Alarmes_Programme_GroupeFroidDefaut1",
+    "Code de l'événement": "A065",
+    "Expression": "Alarmes.GroupeFroidDefaut1",
+    "Message": "Défaut 1 groupe froid",
+    "explication": "Quand la machine est équipée d'un système de refroidissement, ce défaut indique que quelque chose ne va pas au niveau du groupe froid",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Se référer à la doc technique du groupe froid"
+  },
+  {
+    "Nom": "GroupeFroidDefaut2",
+    "ID d'alarme": "Alarmes_Programme_GroupeFroidDefaut2",
+    "Code de l'événement": "A066",
+    "Expression": "Alarmes.GroupeFroidDefaut2",
+    "Message": "Défaut 2 groupe froid",
+    "explication": "Quand la machine est équipée d'un système de refroidissement, ce défaut indique que quelque chose ne va pas au niveau du groupe froid",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Se référer à la doc technique du groupe froid"
+  },
+  {
+    "Nom": "DiscordanceSEC02",
+    "ID d'alarme": "Alarmes_Programme_DiscordanceSEC02",
+    "Code de l'événement": "A067",
+    "Expression": "Alarmes.DiscordanceSEC02",
+    "Message": "Défaut SEC02, sortez la goulotte de distribution, ouvrez toutes les portes, puis fermez-les une à une.",
+    "explication": "Le relais de sécurité SEC02, qui gère les portes et le système d'aiguillage est en défaut.",
+    "cause": "Une porte ou le système d'aiguillage ne sont pas correctement fermés",
+    "solution": "Ouvrir toutes les portes, sortir le système d'aiguillage, fermer les portes une à une, rentrer le système d'aiguillage puis appuyer sur le bouton \"reset\""
+  },
+  {
+    "Nom": "IntConv2VersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_IntConv2VersCompteuse",
+    "Code de l'événement": "A068",
+    "Expression": "Alarmes.IntConvVersCompteuse",
+    "Message": "Défaut intensité Convoyeur 2 vers compteuse",
+    "explication": "Le variateur ne renvoi aucune valeur d'intensité à l'automate malgré le fait que l'automate demande au variateur de faire fonctionner le moteur",
+    "cause": "- Connexion électrique du moteur\n- Les entrées sécurisées du variateur ne sont pas actives",
+    "solution": "- Vérifier la connexion électrique du moteur\n- Vérifier les entrées sécurisées du variateur"
+  },
+  {
+    "Nom": "Conv2VersCompteuse",
+    "ID d'alarme": "Alarmes_Programme_Conv2VersCompteuse",
+    "Code de l'événement": "A069",
+    "Expression": "Alarmes.ConvVersCompteuse",
+    "Message": "Défaut Convoyeur 2 vers compteuse",
+    "explication": "Le variateur renvoi un défaut à l'automate, avec un code d'erreur. Ce code d'erreur est visible sur la page visualisation sur l'IHM, mais également sur l'afficheur du variateur.",
+    "cause": "Dépend du code d'erreur affiché",
+    "solution": "Un pdf est accessible en cliquant sur le bouton \"information défaut\" sur la page visualisation du variateur. Ce pdf détaille les codes d'erreur."
+  },
+  {
+    "Nom": "RempUrgentFiltre1",
+    "ID d'alarme": "Alarmes_Programme_RempUrgentFiltre1",
+    "Code de l'événement": "A070",
+    "Expression": "Alarmes.RempUrgentFiltre1",
+    "Message": "Remplacement urgent filtre 1",
+    "explication": "Sur les machines équipées du nouveau système de filtration d'air, il y a 2 capteurs par filtres. Lorsque les 2 capteurs d'un même filtre sont actifs, cela veut dire qu'il faut changer rapidement le filtre, afin de garantir les bonnes performances de la machine.",
+    "cause": "Filtre usé / colmaté",
+    "solution": "Changer le filtre"
+  },
+  {
+    "Nom": "RempUrgentFiltre2",
+    "ID d'alarme": "Alarmes_Programme_RempUrgentFiltre2",
+    "Code de l'événement": "A071",
+    "Expression": "Alarmes.RempUrgentFiltre2",
+    "Message": "Remplacement urgent filtre 2",
+    "explication": "Sur les machines équipées du nouveau système de filtration d'air, il y a 2 capteurs par filtres. Lorsque les 2 capteurs d'un même filtre sont actifs, cela veut dire qu'il faut changer rapidement le filtre, afin de garantir les bonnes performances de la machine.",
+    "cause": "Filtre usé / colmaté",
+    "solution": "Changer le filtre"
+  },
+  {
+    "Nom": "RempUrgentFiltre3",
+    "ID d'alarme": "Alarmes_Programme_RempUrgentFiltre3",
+    "Code de l'événement": "A072",
+    "Expression": "Alarmes.RempUrgentFiltre3",
+    "Message": "Remplacement urgent filtre 3",
+    "explication": "Sur les machines équipées du nouveau système de filtration d'air, il y a 2 capteurs par filtres. Lorsque les 2 capteurs d'un même filtre sont actifs, cela veut dire qu'il faut changer rapidement le filtre, afin de garantir les bonnes performances de la machine.",
+    "cause": "Filtre usé / colmaté",
+    "solution": "Changer le filtre"
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_BitDeVie",
+    "Code de l'événement": "A104",
+    "Expression": "Alarmes.SexageVoie(1).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 1",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A101",
+    "Expression": "Alarmes.SexageVoie(1).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 1",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_DetectionDeNoir",
+    "Code de l'événement": "A105",
+    "Expression": "Alarmes.SexageVoie(1).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 1, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_DefautAcquisition",
+    "Code de l'événement": "A106",
+    "Expression": "Alarmes.SexageVoie(1).DefautAcquisition",
+    "Message": "Défaut acquisition voie 1, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TemperatureCameraElevee",
+    "Code de l'événement": "A107",
+    "Expression": "Alarmes.SexageVoie(1).TemperatureCameraElevee",
+    "Message": "Température caméras voie 1 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_Salissure",
+    "Code de l'événement": "A108",
+    "Expression": "Alarmes.SexageVoie(1).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 1, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_DefautEclairage",
+    "Code de l'événement": "A109",
+    "Expression": "Alarmes.SexageVoie(1).DefautEclairage",
+    "Message": "Défaut éclairage voie 1",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A110",
+    "Expression": "Alarmes.SexageVoie(1).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 1, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TropDePoussinsColles",
+    "Code de l'événement": "A111",
+    "Expression": "Alarmes.SexageVoie(1).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 1, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_SurchargeHDD",
+    "Code de l'événement": "A112",
+    "Expression": "Alarmes.SexageVoie(1).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD  PC N°1 ",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUBasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_FrequenceGPUBasse",
+    "Code de l'événement": "A114",
+    "Expression": "Alarmes.SexageVoie(1).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse PC N°1",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TemperatureGPUElevee",
+    "Code de l'événement": "A115",
+    "Expression": "Alarmes.SexageVoie(1).TemperatureGPUElevee",
+    "Message": "Température GPU  PC N°1 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_SurchargeGPU",
+    "Code de l'événement": "A116",
+    "Expression": "Alarmes.SexageVoie(1).SurchargeGPU",
+    "Message": "Surcharge GPU  PC N°1",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_SurchargeRAM",
+    "Code de l'événement": "A117",
+    "Expression": "Alarmes.SexageVoie(1).SurchargeRAM",
+    "Message": "Surcharge RAM  PC N°1",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TemperatureCPUElevee",
+    "Code de l'événement": "A118",
+    "Expression": "Alarmes.SexageVoie(1).TemperatureCPUElevee",
+    "Message": "Température CPU  PC N°1 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_SurchargeCPU",
+    "Code de l'événement": "A119",
+    "Expression": "Alarmes.SexageVoie(1).SurchargeCPU",
+    "Message": "Surcharge CPU  PC N°1",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A120",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(1)",
+    "Message": "Avertissement capteur de débit voie 1",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A121",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(1)",
+    "Message": "Défaut capteur de débit voie 1",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie1",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_TempératureCameraCritiqueVoie1",
+    "Code de l'événement": "A122",
+    "Expression": "Alarmes.SexageVoie(1).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 1 ",
+    "explication": "La température d'au moins une des deux caméras de la voie est critique. Les performances de la machine sont diminuées et il est urgent de faire quelque chose.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_CapteurDebit_ComError",
+    "Code de l'événement": "A123",
+    "Expression": "Alarmes.CapteurDebitComError(1)",
+    "Message": "Défaut communication capteur de débit voie 1",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_DefautCuda",
+    "Code de l'événement": "A124",
+    "Expression": "Alarmes.SexageVoie(1).DefautCuda",
+    "Message": "Défaut Cuda voie 1",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_DefautInitAppli",
+    "Code de l'événement": "A125",
+    "Expression": "Alarmes.SexageVoie(1).InitAppli",
+    "Message": "Défaut initialisation application voie 1",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A126",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(1)",
+    "Message": "Avertissement capteur de débit voie 1",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_1_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A127",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(1)",
+    "Message": "Défaut capteur de débit voie 1",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A201",
+    "Expression": "Alarmes.SexageVoie(2).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 2",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_BitDeVie",
+    "Code de l'événement": "A204",
+    "Expression": "Alarmes.SexageVoie(2).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 2",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_DetectionDeNoir",
+    "Code de l'événement": "A205",
+    "Expression": "Alarmes.SexageVoie(2).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 2, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_DefautAcquisition",
+    "Code de l'événement": "A206",
+    "Expression": "Alarmes.SexageVoie(2).DefautAcquisition",
+    "Message": "Défaut acquisition voie 2, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TemperatureCameraElevee",
+    "Code de l'événement": "A207",
+    "Expression": "Alarmes.SexageVoie(2).TemperatureCameraElevee",
+    "Message": "Température caméras voie 2 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_Salissure",
+    "Code de l'événement": "A208",
+    "Expression": "Alarmes.SexageVoie(2).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 2, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_DefautEclairage",
+    "Code de l'événement": "A209",
+    "Expression": "Alarmes.SexageVoie(2).DefautEclairage",
+    "Message": "Défaut éclairage voie 2",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A210",
+    "Expression": "Alarmes.SexageVoie(2).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 2, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TropDePoussinsColles",
+    "Code de l'événement": "A211",
+    "Expression": "Alarmes.SexageVoie(2).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 2, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_SurchargeHDD",
+    "Code de l'événement": "A212",
+    "Expression": "Alarmes.SexageVoie(2).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD  PC N°1",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUBasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_FrequenceGPUBasse",
+    "Code de l'événement": "A214",
+    "Expression": "Alarmes.SexageVoie(2).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse  PC N°1",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TemperatureGPUElevee",
+    "Code de l'événement": "A215",
+    "Expression": "Alarmes.SexageVoie(2).TemperatureGPUElevee",
+    "Message": "Température GPU  PC N°1 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_SurchargeGPU",
+    "Code de l'événement": "A216",
+    "Expression": "Alarmes.SexageVoie(2).SurchargeGPU",
+    "Message": "Surcharge GPU  PC N°1",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_SurchargeRAM",
+    "Code de l'événement": "A217",
+    "Expression": "Alarmes.SexageVoie(2).SurchargeRAM",
+    "Message": "Surcharge RAM  PC N°1",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TemperatureCPUElevee",
+    "Code de l'événement": "A218",
+    "Expression": "Alarmes.SexageVoie(2).TemperatureCPUElevee",
+    "Message": "Température CPU  PC N°1 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_SurchargeCPU",
+    "Code de l'événement": "A219",
+    "Expression": "Alarmes.SexageVoie(2).SurchargeCPU",
+    "Message": "Surcharge CPU  PC N°1",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A220",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(2)",
+    "Message": "Avertissement capteur de débit voie 2",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A221",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(2)",
+    "Message": "Défaut capteur de débit voie 2",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie2",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_TempératureCameraCritiqueVoie2",
+    "Code de l'événement": "A222",
+    "Expression": "Alarmes.SexageVoie(2).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 2",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_CapteurDebit_ComError",
+    "Code de l'événement": "A223",
+    "Expression": "Alarmes.CapteurDebitComError(2)",
+    "Message": "Défaut communication capteur de débit voie 2",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_DefautCuda",
+    "Code de l'événement": "A224",
+    "Expression": "Alarmes.SexageVoie(2).DefautCuda",
+    "Message": "Défaut Cuda voie 2",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_DefautInitAppli",
+    "Code de l'événement": "A225",
+    "Expression": "Alarmes.SexageVoie(2).InitAppli",
+    "Message": "Défaut initialisation application voie 2",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A226",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(2)",
+    "Message": "Avertissement capteur de débit voie 2",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_2_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A227",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(2)",
+    "Message": "Défaut capteur de débit voie 2",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A301",
+    "Expression": "Alarmes.SexageVoie(3).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 3",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_BitDeVie",
+    "Code de l'événement": "A304",
+    "Expression": "Alarmes.SexageVoie(3).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 3",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_DetectionDeNoir",
+    "Code de l'événement": "A305",
+    "Expression": "Alarmes.SexageVoie(3).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 3, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_DefautAcquisition",
+    "Code de l'événement": "A306",
+    "Expression": "Alarmes.SexageVoie(3).DefautAcquisition",
+    "Message": "Défaut acquisition voie 3, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TemperatureCameraElevee",
+    "Code de l'événement": "A307",
+    "Expression": "Alarmes.SexageVoie(3).TemperatureCameraElevee",
+    "Message": "Température caméras voie 3 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_Salissure",
+    "Code de l'événement": "A308",
+    "Expression": "Alarmes.SexageVoie(3).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 3, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_DefautEclairage",
+    "Code de l'événement": "A309",
+    "Expression": "Alarmes.SexageVoie(3).DefautEclairage",
+    "Message": "Défaut éclairage voie 3",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A310",
+    "Expression": "Alarmes.SexageVoie(3).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 3, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TropDePoussinsColles",
+    "Code de l'événement": "A311",
+    "Expression": "Alarmes.SexageVoie(3).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 3, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_SurchargeHDD",
+    "Code de l'événement": "A312",
+    "Expression": "Alarmes.SexageVoie(3).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD  PC N°2",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUBasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_FrequenceGPUBasse",
+    "Code de l'événement": "A314",
+    "Expression": "Alarmes.SexageVoie(3).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse PC N°2",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TemperatureGPUElevee",
+    "Code de l'événement": "A315",
+    "Expression": "Alarmes.SexageVoie(3).TemperatureGPUElevee",
+    "Message": "Température CPU PC N°2 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU1",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_SurchargeGPU1",
+    "Code de l'événement": "A316",
+    "Expression": "Alarmes.SexageVoie(3).SurchargeGPU",
+    "Message": "Surcharge GPU PC N°2",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_SurchargeRAM",
+    "Code de l'événement": "A317",
+    "Expression": "Alarmes.SexageVoie(3).SurchargeRAM",
+    "Message": "Surcharge RAM PC N°2",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TemperatureCPUElevee",
+    "Code de l'événement": "A318",
+    "Expression": "Alarmes.SexageVoie(3).TemperatureCPUElevee",
+    "Message": "Température CPU PC N°2 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_SurchargeCPU",
+    "Code de l'événement": "A319",
+    "Expression": "Alarmes.SexageVoie(3).SurchargeCPU",
+    "Message": "Surcharge CPU PC N°2",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A320",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(3)",
+    "Message": "Avertissement capteur de débit voie 3",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A321",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(3)",
+    "Message": "Défaut capteur de débit voie 3",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie3",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_TempératureCameraCritiqueVoie3",
+    "Code de l'événement": "A322",
+    "Expression": "Alarmes.SexageVoie(3).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 3",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_CapteurDebit_ComError",
+    "Code de l'événement": "A323",
+    "Expression": "Alarmes.CapteurDebitComError(3)",
+    "Message": "Défaut communication capteur de débit voie 3",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_DefautCuda",
+    "Code de l'événement": "A324",
+    "Expression": "Alarmes.SexageVoie(3).DefautCuda",
+    "Message": "Défaut Cuda voie 3",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_DefautInitAppli",
+    "Code de l'événement": "A325",
+    "Expression": "Alarmes.SexageVoie(3).InitAppli",
+    "Message": "Défaut initialisation application voie 3",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A326",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(3)",
+    "Message": "Avertissement capteur de débit voie 3",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_3_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A327",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(3)",
+    "Message": "Défaut capteur de débit voie 3",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A401",
+    "Expression": "Alarmes.SexageVoie(4).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 4",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_BitDeVie",
+    "Code de l'événement": "A404",
+    "Expression": "Alarmes.SexageVoie(4).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 4",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_DetectionDeNoir",
+    "Code de l'événement": "A405",
+    "Expression": "Alarmes.SexageVoie(4).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 4, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_DefautAcquisition",
+    "Code de l'événement": "A406",
+    "Expression": "Alarmes.SexageVoie(4).DefautAcquisition",
+    "Message": "Défaut acquisition voie 4, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TemperatureCameraElevee",
+    "Code de l'événement": "A407",
+    "Expression": "Alarmes.SexageVoie(4).TemperatureCameraElevee",
+    "Message": "Température caméras voie 4 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_Salissure",
+    "Code de l'événement": "A408",
+    "Expression": "Alarmes.SexageVoie(4).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 4, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_DefautEclairage",
+    "Code de l'événement": "A409",
+    "Expression": "Alarmes.SexageVoie(4).DefautEclairage",
+    "Message": "Défaut éclairage voie 4",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A410",
+    "Expression": "Alarmes.SexageVoie(4).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 4, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TropDePoussinsColles",
+    "Code de l'événement": "A411",
+    "Expression": "Alarmes.SexageVoie(4).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 4, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_SurchargeHDD",
+    "Code de l'événement": "A412",
+    "Expression": "Alarmes.SexageVoie(4).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD PC N°2",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUBasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_FrequenceGPUBasse",
+    "Code de l'événement": "A413",
+    "Expression": "Alarmes.SexageVoie(4).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse PC N°2",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TemperatureGPUElevee",
+    "Code de l'événement": "A415",
+    "Expression": "Alarmes.SexageVoie(4).TemperatureGPUElevee",
+    "Message": "Température GPU PC N°2 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU1",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_SurchargeGPU1",
+    "Code de l'événement": "A416",
+    "Expression": "Alarmes.SexageVoie(4).SurchargeGPU",
+    "Message": "Surcharge GPU PC N°2",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_SurchargeRAM",
+    "Code de l'événement": "A417",
+    "Expression": "Alarmes.SexageVoie(4).SurchargeRAM",
+    "Message": "Surcharge RAM PC N°2",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TemperatureCPUElevee",
+    "Code de l'événement": "A418",
+    "Expression": "Alarmes.SexageVoie(4).TemperatureCPUElevee",
+    "Message": "Température CPU PC N°2 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_SurchargeCPU",
+    "Code de l'événement": "A419",
+    "Expression": "Alarmes.SexageVoie(4).SurchargeCPU",
+    "Message": "Surcharge CPU PC N°2",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A420",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(4)",
+    "Message": "Avertissement capteur de débit voie 4",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A421",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(4)",
+    "Message": "Défaut capteur de débit voie 4",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie4",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_TempératureCameraCritiqueVoie4",
+    "Code de l'événement": "A422",
+    "Expression": "Alarmes.SexageVoie(4).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 4",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_CapteurDebit_ComError",
+    "Code de l'événement": "A423",
+    "Expression": "Alarmes.CapteurDebitComError(4)",
+    "Message": "Défaut communication capteur de débit voie 4",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_DefautCuda",
+    "Code de l'événement": "A424",
+    "Expression": "Alarmes.SexageVoie(4).DefautCuda",
+    "Message": "Défaut Cuda voie 4",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_DefautInitAppli",
+    "Code de l'événement": "A425",
+    "Expression": "Alarmes.SexageVoie(4).InitAppli",
+    "Message": "Défaut initialisation application voie 4",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A426",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(4)",
+    "Message": "Avertissement capteur de débit voie 4",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_4_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A427",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(4)",
+    "Message": "Défaut capteur de débit voie 4",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A501",
+    "Expression": "Alarmes.SexageVoie(5).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 5",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_BitDeVie",
+    "Code de l'événement": "A504",
+    "Expression": "Alarmes.SexageVoie(5).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 5",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_DetectionDeNoir",
+    "Code de l'événement": "A505",
+    "Expression": "Alarmes.SexageVoie(5).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 5, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_DefautAcquisition",
+    "Code de l'événement": "A506",
+    "Expression": "Alarmes.SexageVoie(5).DefautAcquisition",
+    "Message": "Défaut acquisition voie 5, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TemperatureCameraElevee",
+    "Code de l'événement": "A507",
+    "Expression": "Alarmes.SexageVoie(5).TemperatureCameraElevee",
+    "Message": "Température caméras voie 5 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_Salissure",
+    "Code de l'événement": "A508",
+    "Expression": "Alarmes.SexageVoie(5).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 5, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_DefautEclairage",
+    "Code de l'événement": "A509",
+    "Expression": "Alarmes.SexageVoie(5).DefautEclairage",
+    "Message": "Défaut éclairage voie 5",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A510",
+    "Expression": "Alarmes.SexageVoie(5).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 5, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TropDePoussinsColles",
+    "Code de l'événement": "A511",
+    "Expression": "Alarmes.SexageVoie(5).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 5, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_SurchargeHDD",
+    "Code de l'événement": "A512",
+    "Expression": "Alarmes.SexageVoie(5).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD PC N°3",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUbasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_FrequenceGPUbasse",
+    "Code de l'événement": "A513",
+    "Expression": "Alarmes.SexageVoie(5).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse PC N°3",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TemperatureGPUElevee",
+    "Code de l'événement": "A515",
+    "Expression": "Alarmes.SexageVoie(5).TemperatureGPUElevee",
+    "Message": "Température GPU PC N°3 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_SurchargeGPU",
+    "Code de l'événement": "A516",
+    "Expression": "Alarmes.SexageVoie(5).SurchargeGPU",
+    "Message": "Surcharge GPU PC N°3",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_SurchargeRAM",
+    "Code de l'événement": "A517",
+    "Expression": "Alarmes.SexageVoie(5).SurchargeRAM",
+    "Message": "Surcharge RAM PC N°3",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TemperatureCPUElevee",
+    "Code de l'événement": "A518",
+    "Expression": "Alarmes.SexageVoie(5).TemperatureCPUElevee",
+    "Message": "Température CPU PC N°3 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_SurchargeCPU",
+    "Code de l'événement": "A519",
+    "Expression": "Alarmes.SexageVoie(5).SurchargeCPU",
+    "Message": "Surcharge CPU PC N°3",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A520",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(5)",
+    "Message": "Avertissement capteur de débit voie 5",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A521",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(5)",
+    "Message": "Défaut capteur de débit voie 5",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie5",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_TempératureCameraCritiqueVoie5",
+    "Code de l'événement": "A522",
+    "Expression": "Alarmes.SexageVoie(5).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 5",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_CapteurDebit_ComError",
+    "Code de l'événement": "A523",
+    "Expression": "Alarmes.CapteurDebitComError(5)",
+    "Message": "Défaut communication capteur de débit voie 5",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_DefautCuda",
+    "Code de l'événement": "A524",
+    "Expression": "Alarmes.SexageVoie(5).DefautCuda",
+    "Message": "Défaut Cuda voie 5",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_DefautInitAppli",
+    "Code de l'événement": "A525",
+    "Expression": "Alarmes.SexageVoie(5).InitAppli",
+    "Message": "Défaut initialisation application voie 5",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A526",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(5)",
+    "Message": "Avertissement capteur de débit voie 5",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_5_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A527",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(5)",
+    "Message": "Défaut capteur de débit voie 5",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "PoussinCoinceEntreeVoie",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_PoussinCoinceEntreeVoie",
+    "Code de l'événement": "A601",
+    "Expression": "Alarmes.SexageVoie(6).PoussinCoinceEnSortieAnalyse",
+    "Message": "Poussin coincé en sortie Analyse voie 6",
+    "explication": "La machine estime qu'il y a au moins un poussin coincé quelque part, ce qui provoque des tas de poussins sur cette voie, sous l'analyse. Cela fausse donc les résultats.",
+    "cause": "Un poussin est passé sous la bande du convoyeur ou est coincé sous une rive et provoque des tas de poussins.",
+    "solution": "S'il y a un / des poussin(s) coincé(s), retirer-les."
+  },
+  {
+    "Nom": "BitDeVie",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_BitDeVie",
+    "Code de l'événement": "A604",
+    "Expression": "Alarmes.SexageVoie(6).BitDeVie",
+    "Message": "Défaut communication PC / PLC voie 6",
+    "explication": "Il n'y a pas de communication entre l'automate (PLC) et l'application informatique de cette voie.",
+    "cause": "- Le PC est en défaut : freeze, écran bleu, pas d'alimentation, etc…\n- Liaison Ethernet PC / PLC défaillante",
+    "solution": "- Eteindre et rallumer la machine\n- Vérifier les connexions Ethernet\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DetectionDeNoir",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_DetectionDeNoir",
+    "Code de l'événement": "A605",
+    "Expression": "Alarmes.SexageVoie(6).DetectionDeNoir",
+    "Message": "Détection de noir sur la voie 6, vérifier que les caches des caméras sont bien retirés",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautAcquisition",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_DefautAcquisition",
+    "Code de l'événement": "A606",
+    "Expression": "Alarmes.SexageVoie(6).DefautAcquisition",
+    "Message": "Défaut acquisition voie 6, le PC ne reçoit pas les images",
+    "explication": "Le PC ne reçoit pas les images",
+    "cause": "- Perte de communication avec la caméra\n- Caméra ou câble défectueux",
+    "solution": "- Débrancher puis rebrancher les câbles USB des caméras, puis appuyer sur le bouton \"INITIALISATION\" sur l'IHM\n- Si le problème persiste, redémarrer la machine\n- Si le problème persiste encore, contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCameraElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TemperatureCameraElevee",
+    "Code de l'événement": "A607",
+    "Expression": "Alarmes.SexageVoie(6).TemperatureCameraElevee",
+    "Message": "Température caméras voie 6 trop élevée",
+    "explication": "La température d'au moins une des deux caméras de la voie est trop élevée. Les performances de la machine peuvent être diminuées.",
+    "cause": "- Environnement trop chaud\n- Mauvaise dissipation de la chaleur dans le caisson caméras",
+    "solution": "- Contrôler le caisson caméras\n- Essayer d'arrêter la machine pendant quelques minutes\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "Salissure",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_Salissure",
+    "Code de l'événement": "A608",
+    "Expression": "Alarmes.SexageVoie(6).Salissure",
+    "Message": "Défaut salissure zone de prise d'image voie 6, nettoyer la zone",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "DefautEclairage",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_DefautEclairage",
+    "Code de l'événement": "A609",
+    "Expression": "Alarmes.SexageVoie(6).DefautEclairage",
+    "Message": "Défaut éclairage voie 6",
+    "explication": "Pas assez ou trop d'éclairage sur la voie",
+    "cause": "- Mauvaise valeur sur le temps d'exposition des caméras.\n- Problème de calibration sur les caméras.\n- Salissure sur les caméras.\n- Problème d'éclairage sur les barres de LED.\n- Forte réflexion de lumière sur les rives.",
+    "solution": "- Vérifier que les éclairages ne soient pas sales\n- Vérifier que les éclairages s'allument autant (ni plus, ni moins) que les autres voies qui fonctionnent\n- Vérifier qu'il n'y ai pas trop de réflexion de la lumière sur les rives des convoyeurs\n- Contrôler le temps d'exposition des caméras (Ecat-iD)\n- Refaire une calibration des caméras (Ecat-iD)"
+  },
+  {
+    "Nom": "TropDePoussinsDifficilementSexable",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TropDePoussinsDifficilementSexable",
+    "Code de l'événement": "A610",
+    "Expression": "Alarmes.SexageVoie(6).TropDePoussinsDifficilementSexable",
+    "Message": "Défaut sexage voie 6, trop de poussins difficilement sexables",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins difficilement sexables",
+    "cause": "- Poussins issus de parquet trop jeunes (<30 semaines, c'est un problème connu)\n- Problème optique ou des salissures sur les caméras.\n- Les poussins n'ouvrent pas assez les ailes à cause d'un dysfonctionnement sur les systèmes d'oscillation\n- Les poussins sont trop collés (cadence trop élevée ou mauvais répartition entre les voies)",
+    "solution": "- Vérifier l'âge du parquet (normal si < à 30 semaines)\n- Contrôler les éclairages\n- Contrôler les systèmes d'oscillation\n- Faire attention à la répartition, la quantité, et le nombre de poussins sur la table de tri pour éviter d'avoir trop de poussins collés"
+  },
+  {
+    "Nom": "TropDePoussinsColles",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TropDePoussinsColles",
+    "Code de l'événement": "A611",
+    "Expression": "Alarmes.SexageVoie(6).TropDePoussinsColles",
+    "Message": "Défaut répartition voie 6, trop de poussins collés sur les images",
+    "explication": "Sur plusieurs centaines de poussins d'affilés, il y a eu trop de poussins collés",
+    "cause": "- Poussins coincés\n- Cadence trop élevée\n- Mauvaise séparation sur la table de tri\n- Problème sur les convoyeurs de séparation.",
+    "solution": "- Réduire la cadence\n- Vérifier la bonne répartition sur la ligne de tri\n- Vérifier le bon fonctionnement du convoyeur séparateur"
+  },
+  {
+    "Nom": "SurchargeHDD",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_SurchargeHDD",
+    "Code de l'événement": "A612",
+    "Expression": "Alarmes.SexageVoie(6).SurchargeHDD",
+    "Message": "Surcharge disque dur SSD PC N°3",
+    "explication": "Le disque dur SSD du PC est occupé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "FrequenceGPUbasse",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_FrequenceGPUbasse",
+    "Code de l'événement": "A613",
+    "Expression": "Alarmes.SexageVoie(6).FrequenceGPUBasse",
+    "Message": "Fréquence GPU basse PC N°3",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "TemperatureGPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TemperatureGPUElevee",
+    "Code de l'événement": "A615",
+    "Expression": "Alarmes.SexageVoie(6).TemperatureGPUElevee",
+    "Message": "Température CPU PC N°3 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeGPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_SurchargeGPU",
+    "Code de l'événement": "A616",
+    "Expression": "Alarmes.SexageVoie(6).SurchargeGPU",
+    "Message": "Surcharge GPU PC N°3",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeRAM",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_SurchargeRAM",
+    "Code de l'événement": "A617",
+    "Expression": "Alarmes.SexageVoie(6).SurchargeRAM",
+    "Message": "Surcharge RAM PC N°3",
+    "explication": "La mémoire RAM du est surchargé à plus de 90% de sa capacité",
+    "cause": "- Tests en cours avec la sauvegarde des images activée.\n- Quelqu'un a cliqué dans la console de l'application (= freeze de l'application)\n- Quelqu'un a oublié de désactiver la sauvegarde des images dans le fichier de configuration",
+    "solution": "- Vérifier le fichier de config (Ecat-iD)\n- Contacter Ecat-iD"
+  },
+  {
+    "Nom": "TemperatureCPUElevee",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TemperatureCPUElevee",
+    "Code de l'événement": "A618",
+    "Expression": "Alarmes.SexageVoie(6).TemperatureCPUElevee",
+    "Message": "Température CPU PC N°3 trop élevée",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "SurchargeCPU",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_SurchargeCPU",
+    "Code de l'événement": "A619",
+    "Expression": "Alarmes.SexageVoie(6).SurchargeCPU",
+    "Message": "Surcharge CPU PC N°3",
+    "explication": "La CPU du PC est surchargé à plus de 95% de sa capacité",
+    "cause": "Quelque chose occupe les ressources du PC (OS, driver, programme, etc…)",
+    "solution": "- Redémarrer le PC\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_Avertissement",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_CapteurDeDebit_Avertissement",
+    "Code de l'événement": "A620",
+    "Expression": "Alarmes.CapteurDebit_AvertissementVoie(6)",
+    "Message": "Avertissement capteur de débit voie 6",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_Defaut",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_CapteurDeDebit_Defaut",
+    "Code de l'événement": "A621",
+    "Expression": "Alarmes.CapteurDebit_DefautVoie(6)",
+    "Message": "Défaut capteur de débit voie 6",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie intérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "TempératureCameraCritiqueVoie6",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_TempératureCameraCritiqueVoie6",
+    "Code de l'événement": "A622",
+    "Expression": "Alarmes.SexageVoie(6).TemperatureCameraCritique",
+    "Message": "Défaut température caméra voie 6",
+    "explication": "Non trouvé",
+    "cause": "Non trouvé",
+    "solution": "Non trouvé"
+  },
+  {
+    "Nom": "CapteurDebit_ComError",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_CapteurDebit_ComError",
+    "Code de l'événement": "A623",
+    "Expression": "Alarmes.CapteurDebitComError(6)",
+    "Message": "Défaut communication capteur de débit voie 6",
+    "explication": "L'automate ne communique pas avec le capteur",
+    "cause": "- Capteur défectueux\n- Câble défectueux",
+    "solution": "- Vérifier l'état du capteur et son câble et changer ce qui doit l'être\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautCuda",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_DefautCuda",
+    "Code de l'événement": "A624",
+    "Expression": "Alarmes.SexageVoie(6).DefautCuda",
+    "Message": "Défaut Cuda voie 6",
+    "explication": "Il y a un problème (matériel ou logiciel) sur la carte graphique du PC, qui ne peut donc pas analyser les images",
+    "cause": "- Problème matériel\n- Problème logiciel",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "DefautInitAppli",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_DefautInitAppli",
+    "Code de l'événement": "A625",
+    "Expression": "Alarmes.SexageVoie(6).InitAppli",
+    "Message": "Défaut initialisation application voie 6",
+    "explication": "L'application n'arrive pas à démarrer correctement",
+    "cause": "L'application a du mal à initialiser un de ses modules : carte PCI, caméras, carte graphique, etc…",
+    "solution": "- Redémarrer la machine\n- Si le problème persiste, contacter Ecat-iD"
+  },
+  {
+    "Nom": "CapteurDeDebit_AvertissementFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_CapteurDeDebit_AvertissementFemelle",
+    "Code de l'événement": "A626",
+    "Expression": "Alarmes.CapteurDebit_AvertissementFemelleVoie(6)",
+    "Message": "Avertissement capteur de débit voie 6",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  },
+  {
+    "Nom": "CapteurDeDebit_DefautFemelle",
+    "ID d'alarme": "Alarmes_Voies_Voie_6_CapteurDeDebit_DefautFemelle",
+    "Code de l'événement": "A627",
+    "Expression": "Alarmes.CapteurDebit_DefautFemelleVoie(6)",
+    "Message": "Défaut capteur de débit voie 6",
+    "explication": "Le débit d'air mesuré par le capteur de débit a été hors plage de fonctionnement pendant un certain nombre de fois. Ces codes sont pour l'aiguillage vers la voie extérieure.",
+    "cause": "- Niveau d'air trop faible ou trop élevé\n- Electrovanne bouchée ou colmatée\n- Tuyau endommagé (plié, bouché, percé, etc…)",
+    "solution": "- Contrôler le niveau d'air\n- Contrôler l'électrovanne\n- Contrôler le tuyau d'air\n- Changer l'électrovanne et / ou le tuyau si nécessaire"
+  }
+]

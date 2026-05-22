@@ -10,14 +10,11 @@ let defauts = [];
    CHARGEMENT JSON
 ------------------------------ */
 
-fetch("../donnees/bdd.json")
+fetch("../donnees/PMXA_bdd.json")
     .then(response => response.json())
-.then(data => {
-    defauts = data;
-
-    console.log("BDD chargée :", defauts);
-    console.log("Défauts PMXA :", defauts.filter(defaut => defaut.Machine === "PMXA"));
-})
+    .then(data => {
+        defauts = data;
+    })
     .catch(error => {
         console.error("Erreur chargement JSON :", error);
     });
@@ -55,34 +52,27 @@ tabButtons.forEach(button => {
 ------------------------------ */
 
 searchInput.addEventListener("input", () => {
-    rechercherDefaut("PMAF");
+    rechercherDefaut();
 });
 
-function rechercherDefaut(machine) {
+function rechercherDefaut() {
 
     const recherche = searchInput.value
         .trim()
         .toUpperCase();
 
     if (recherche.length === 0) {
-
         resultsDiv.innerHTML = "";
-
         return;
     }
 
     const resultats = defauts.filter(defaut => {
 
         return (
-
-            defaut.Machine === machine &&
-
-            defaut.Nom &&
-
-            defaut.Nom
+            defaut.Message &&
+            String(defaut.Message)
                 .toUpperCase()
                 .includes(recherche)
-
         );
 
     });
@@ -93,24 +83,30 @@ function rechercherDefaut(machine) {
 /* ------------------------------
    AFFICHAGE RESULTATS
 ------------------------------ */
+
 function afficherResultats(resultats) {
+
     resultsDiv.innerHTML = "";
 
     if (resultats.length === 0) {
+
         resultsDiv.innerHTML = `
             <div class="card">
                 <p>AUCUN DÉFAUT TROUVÉ.</p>
             </div>
         `;
+
         return;
     }
 
     resultats.forEach(defaut => {
+
         const card = document.createElement("div");
+
         card.classList.add("card", "result-item");
 
         card.innerHTML = `
-            <h3>${defaut.Nom.toUpperCase()}</h3>
+            <h3>${String(defaut.Message).toUpperCase()}</h3>
         `;
 
         card.addEventListener("click", () => {
@@ -118,19 +114,38 @@ function afficherResultats(resultats) {
         });
 
         resultsDiv.appendChild(card);
+
     });
+
 }
 
+/* ------------------------------
+   POPUP
+------------------------------ */
+
 function ouvrirPopupDefaut(defaut) {
-    document.getElementById("popupTitle").innerText = defaut.Nom.toUpperCase();
-    document.getElementById("popupType").innerText = defaut.type.toUpperCase();
-    document.getElementById("popupCause").innerHTML = defaut.Cause.toUpperCase().replace(/\n/g, "<br>");
-    document.getElementById("popupSolution").innerHTML = defaut.Solution.toUpperCase().replace(/\n/g, "<br>");
+
+    document.getElementById("popupTitle").innerText =
+        String(defaut.Message || "").toUpperCase();
+
+    document.getElementById("popupType").innerText =
+        String(defaut["Code de l'événement"] || "").toUpperCase();
+
+    document.getElementById("popupCause").innerHTML =
+        String(defaut.cause || "")
+            .replace(/\n/g, "<br>");
+
+    document.getElementById("popupSolution").innerHTML =
+        String(defaut.solution || "")
+            .replace(/\n/g, "<br>");
 
     document.getElementById("popupDefaut").classList.add("active");
 }
 
 function fermerPopupDefaut() {
-    document.getElementById("popupDefaut").classList.remove("active");
-}
 
+    document
+        .getElementById("popupDefaut")
+        .classList.remove("active");
+
+}
