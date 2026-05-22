@@ -1,4 +1,4 @@
-const tabButtons = document.querySelectorAll(".tab-btn");
+const tabButtons = document.querySelectorAll(".machine-nav-btn");
 const tabContents = document.querySelectorAll(".tab-content");
 
 const searchInput = document.getElementById("searchInput");
